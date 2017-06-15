@@ -37,7 +37,7 @@ function includeCSS(url) {
 
 //alert('#indexHolder length: ' + $('#indexHolder').length);
 
-var script1 = "/site/js/index.js";
+var script1 = "js/index.js";
 if (location.host != 'localhost' && location.host != 'review.georgia.org') {
     // Use https when available
     script1 = "js/index.js";
