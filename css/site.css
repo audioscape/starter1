@@ -1,0 +1,4587 @@
+.showLayersMapBar {
+	display: none; /* temp */
+}
+
+body {
+	margin:0px; /* To override iFrame parent */
+}
+
+.moduleJS .hideMobile {display:block;/* z-index: 10; */}
+.moduleJS .showMobile {display:none;}
+
+.moduleJS {
+	margin:auto; /* Center on PC because .mContainer extends through from parent page when in iFrame. */
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Open Sans', 'Helvetica Neue', HelveticaNeue, calibri, arial, sans-serif;
+	font-size: 14px;
+	position: relative;
+	/* width: 100%; */
+}
+.moduleJS .video-module {
+	width:100%;
+	/*
+	position:absolute;
+	left:0 right:0;
+	*/
+}
+.mContainer {
+	/* float:left; */ /* to encompass content for absolute background */
+	/* border: 10px solid red; */
+}
+html a {
+    color: #3B99FC;
+}
+.hideLive {
+	display:none !important;
+}
+.hideFilter {
+	display: none;
+}
+.moduleJS .moduleContent {
+	width:100%;
+	background: #fff;
+}
+
+/* From index header */
+
+div.cartodb-legend-stack {
+	left:20px;
+	right:auto !important;
+}
+#smartDetails {
+    float: right;
+}
+#pagination {
+	/* margin-right: 20px; */
+	white-space: nowrap;
+	float:left;
+}
+.listNav {
+	display: none;
+	float: right;
+	/* padding-top:3px; */
+}
+.listNav .disable {
+	display: none;
+}
+.listNav .listPrev {
+	margin-left:-8px;
+}
+.listNav .material-icons {
+	color: #fff;
+	font-size: 36px;
+}
+.littleArrows .disable {
+
+}
+.rowCounts {
+	margin-top: 13px;
+}
+.smFont {
+	font-size: 10pt;
+	color: #fff;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: #555;
+} 
+.btn.disable {
+  display: none;
+  opacity: 0.3;
+  cursor: default;
+}
+.btn.disable:hover {
+	background: #fff;
+	color: #999;
+  	cursor: default !important;
+}
+.btn.disable i:hover {
+	cursor: default !important;
+}
+
+select {
+   /* background: transparent; */
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 1px solid #d9d9de;
+   background-color: #fff;
+   border-radius: 0;
+   height: 40px;
+   /* -webkit-appearance: none; */
+   font-size: 16pt;
+   font-color: #777;
+}
+select:hover {
+	background-color: #f7f7f7;
+}
+select[multiple] { /* Allows for IE7+ */
+    height: auto !important;
+}
+input[type="text"] {
+	min-height: 30px;
+}
+input[type=checkbox] {-ms-transform: scale(1.3); /* IE */-moz-transform: scale(1.3); /* FF */-webkit-transform: scale(1.3); /* Safari and Chrome */-o-transform: scale(1.3); /* Opera */padding:10px;}
+
+.widgetHolder { /* For embedded only */
+	position:relative;
+}
+.reveal {
+	display: block !important; /* Initially hidden while site.css loads. */
+}
+.contentarea {
+	float:right;
+}
+.maincontent {
+	color: #ddd;
+	border-radius: 12px;
+	background-color: rgba(33, 33, 33, 0.7);
+	padding: 12px;
+	float: left;
+	margin:20px 20px 20px 0;
+}
+.videoCircle {
+	background-color: #4C4B4B;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+}
+.videoArrow {
+	width: 0; 
+	height: 0; 
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-left: 20px solid white;
+}
+/*
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 17.3px 10px 0;
+border-color: transparent #007bff transparent transparent;
+*/
+.forwardArrow {
+	margin-top: 5px;
+	margin-right: 5px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 8.7px;
+	border-color: transparent transparent transparent #999;
+}
+.backArrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 10px 17.3px 10px 0;
+	border-width: 9px 15.6px 9px 0;
+
+	border-width: 5px 8.7px 5px 0;
+	border-color: transparent #fff transparent transparent;
+	margin: 8px;
+}
+.backArrowX:hover {
+	border-color: transparent #333 transparent transparent;
+}
+.backArrowOpaque {
+	opacity: 0.5;
+}
+.backArrowOpaque:hover {
+	opacity: 0.9;
+}
+.forwardArrowInBar {
+	/* margin: 0px 10px 4px 16px; */
+	margin-top: 13px;
+	margin-right: 8px;
+	/* display: none; */
+	border-color: transparent transparent transparent #fff;
+	/* z-index: 999999; */
+	/* margin-top: 10px; */
+}
+
+select {
+	cursor: pointer;
+}
+
+.sitemoduleBackground {
+	background-color: #000; /* Appears behind image based on image opacity */
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	width:100%;
+}
+.moduleBackground {
+	z-index: -1; /* Causes background to disappear when expanding, but needed for video. */
+	/*
+	width:100%;
+	max-width:100%;
+	min-height: 1200px; Makes widget-local too tall. Set in embed.js instead. */
+	background-color: #000; /* Appears behind image based on image opacity */
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0; /* Otherwise body background is seen through opacity of moduleBackgroundImage. */
+}
+#siteHeaderX {
+	position: relative;
+	/* top: 0; */
+	/* left: 0; */
+	/* right: 0; */
+	/* Places behind footer. Removed in fullscreen mode - else black and not clickable. */
+	float: left;
+	width: 100%;
+	z-index: 100;
+}
+#siteHeader {
+	position: absolute;
+	width: 100%;
+	z-index: 100;
+}
+.absoluteVideoHeader {
+	position: fixed;
+}
+.absoluteVideoFilter {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999999;
+}
+.moduleVideoXXX {
+	position: relative;
+}
+.moduleBackgroundImage, .siteHeaderImage {
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	background-size: 100%;
+	width: 100%; /* used when position set to fixed */
+	top: 0px;
+}
+.moduleBackgroundImage {
+	/* position: fixed; */
+}
+.moduleBackgroundImageDarken, .siteHeaderImageDarken {
+	opacity: 0.5 !important;
+}
+.siteHeaderImage {
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	width:100%;
+	borderX: 1px solid red;
+}
+.material-icons:hover {
+	cursor:pointer
+}
+
+/* MENU */
+.hideMetaMenu {
+	position: absolute;
+	right: 0px;
+	z-index: 1;
+	cursor: pointer;
+	font-size: 30px !important;
+	font-weight: 100;
+	margin-right: 4px;
+	margin-top: -6px;
+	padding: 14px 5px 0px 7px;
+	color: #ccc;
+	display: block;
+}
+.closePanel {
+	position: absolute;
+    right: 0px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 30px !important;
+    font-weight: 100;
+    margin-right: 4px;
+    margin-top: -6px;
+    padding: 14px 5px 0px 7px;
+    color: #ccc;
+    display: block;
+}
+.globalMenuPosition {
+	/* background: #fff; */
+	float: left;
+	width: 100%;
+}
+#globalMenu {
+	display: none;
+}
+#smartNavSideTD {
+	/* background: #3E3E3E; */
+	border-right:1px solid #ddd;
+	overflow: hidden;
+}
+.smartSideMenuOpen {
+	/* width:150px !important; */
+	overflow:hidden;
+}
+.sideTabText {
+	/*vertical-align: middle;*/
+	font-size: 13px;
+	/* min-width: 100px; */
+	min-height: 42px;
+	padding: 13px 8px 0 0;
+	float: left;
+}
+.sideTabTextStyle {
+	color: #888;
+	padding-left: 7px;
+}
+.catch:hover {
+	color: #fff !important;
+}
+#smartNavMainInner {
+	min-width: 300px;
+	width: 100%;
+	/* background-color:#2F2F2F; */
+	/* background-color:rgba(5, 5, 5, 0.8); */
+}
+.smartNavSide {
+	width:100%;
+	/* padding:	0px 15px 20px 15px; */
+	/*
+	opacity: 1;
+	background: #fafafa;
+	*/
+	/* border-right: solid 1pt #888; */
+}
+
+.smartNavSide ul li li 
+{
+	padding:				3px 0 3px 15px;
+}
+/*
+.smartNavSide h3 
+{
+	margin:					0;
+	font-size:				14px;
+	padding:				25px 0 5px 0;
+}
+.smartNavSide h3 a:link, .smartNavSide h3 a:visited {
+	color:	#fff;
+}
+*/
+.smartNavSide i {
+	min-width:22px;
+}
+.smartNavPanel {
+	display:none;
+	float:left;
+	color:#bbb;
+}
+#intranetMain { /* Overrides .smartNavPanel */
+	displayX: block;
+}
+#locationsMain {
+	display: none; /* was block. Added space above narrow mobile. */
+	width:100%;/* needed for menu/index.html */
+	/* max-width: 575px; */ /* temp, prevents app-style menu from exceeding right side. */
+	/* max-height: 850px; */
+	/* padding-right: 10px; */
+}
+#menuHolder {
+	/* display:none; */
+	max-width:2000px;
+	/* background-color: rgba(44, 44, 44, .99); */
+	/* border-top: 1px solid #eee; */
+	/* border-right: 1px solid #eee; */
+}
+.menuHolderTop {
+	background: #181818;
+	background-color: rgba(22, 22, 22, 0.98);
+	/* padding: 20px; */
+	float: left;
+	width: 100%;
+}
+@media (max-width: 800px) {
+	.menuHolderTop {
+
+	}
+}
+.siteTopTabs {
+	padding-left: 15px;
+}
+.siteTopTabs div {
+	font-family: 'Open Sans Condensed';
+	font-size: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	float:left;
+	color: #fff;
+	padding:20px 18px 8px 4px;
+	cursor: pointer;
+}
+.siteTopTabs div:hover {
+	background-color: #333;
+}
+.navTopHolder {
+	pointer-events: auto;
+}
+.fixedTopBarBkgd .smartSideMenuHolder {
+	pointer-eventsX: auto;
+}
+.smartSideMenuHolder {
+	/* max-width: 480px; */
+	width: 320px;
+	min-width: 320px;
+	/* border-right: 1px solid #eee; */
+	/* margin-right: 14px; */
+	pointer-events: auto;
+}
+.smartSideMenuHolderAbsolute {
+	position:absolute;
+    z-index: 999999;
+}
+@media (min-width: 801px) {
+	.smartSideMenuHolder{
+		margin-left: 9px;
+	}
+}
+#sideMenuHolder {
+	background: #fff;
+}
+.smartNavPanel h3 {
+	color: #ccc;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.smartNavSide li a:link, .smartNavSide li a:visited {
+	color:	#242424;
+}
+
+.smartNavPanel a {
+    /* color: #d5e14d; */
+}
+.smartNavPanel a:hover {
+    /* color: #fff; */
+}
+.smartNavPanel svg {
+	width:47px;
+}
+/* Cyclist by Ealancheliyan from the Noun Project 
+To do: correct heads on this svg noun_10842.svg
+
+No longer used because Access-Control-Allow-Origin:http://data.georgia.org needed somewhere.
+*/
+.smartNavPanel svg path {
+	fill:#fff;
+}
+.smartNavPanel svg:hover path {
+    fill: #def;
+}
+
+
+.menuUL {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* float: left; */
+}
+.menuUL li {
+	position: relative;
+	line-height: 12pt;
+	font-size: 10pt;/* to remove */
+	margin: 0px;
+	padding-left: 18px;
+	padding-top: 0px;
+	padding-right: 4px;
+	min-width: 49px;
+	white-space:nowrap;
+	border-bottom: 1px solid #eee;
+	/* border-left: 1px solid #eee; */
+	border-right: 1px solid #eee;
+	z-index:2; /* So LI click triggers event, instead of hitting contained text. */
+	min-height: 48px; /* for narrow, when text beside icon hidden */
+	/* overflow: hidden; */
+	/* white-space: nowrap; */
+	/* min-width: 200px; */
+	display: flex;
+}
+.menuUL li.active {
+	border-right: 0px solid #fff;
+	/* border-left: 1px solid #eee; */
+	background: #000;
+	margin-right: -1px;
+}
+.menuUL li:hover {
+	background-color: #ddd;
+	color: #333;
+}
+.menuUL li.active:hover {
+	background-color: #fff;
+	/* border-right: none; */
+}
+/*
+.menuUL .active:hover {
+	color:#fff;
+}
+*/
+.menuUL li .catch {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10; /* Places the link above everything else in the div */
+	width: 100%;
+	height: 100%;
+
+	/* to remove */
+	cursor:pointer;
+	text-decoration: none;
+}
+.menuUL .menuSideLeftXXX {
+	float:left;
+	overflow:visible;
+	width:32px;
+	max-height:20px;
+	margin-left:-4px;
+	margin-top:-6px
+}
+
+.menuUL li i {
+	color: #888;
+	font-size: 16pt;
+	padding-top: 11px;
+	margin-right: 6px;
+	float: left;
+}
+.menuRect {
+	width: 140px;
+	float:left;
+	max-width:140px;
+	width: 20%;
+	max-width: 168px;
+	min-width: 100px;
+	cursor: pointer;
+	pointer-events: auto;
+}
+.menuRectBkgd {
+	/* margin: -3px; */
+	/* margin-right: 17px; */ /* use 20px when no border */
+	padding-top: 10px;
+}
+.menuRectBkgd:hover {
+	background-color: #4586F6;
+}
+.menuRectIcon {
+	position: relative;
+	min-height: 50px;
+}
+.menuRectIcon > div {
+	padding-topX: 8px;
+	position: absolute;
+	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+.menuRect .menuRectLink {
+	min-height: 94px;
+	text-align: center;
+	display: block;
+	background: #;
+	color: #fff !important;
+	font-size: 15px !important;
+	line-height: 16px;
+}
+.menuRect .menuRectLink:hover {
+	color:#fff;
+	text-shadow: 2px 2px 8px rgba(33, 33, 33, .5);
+	text-decoration: none;
+}
+.menuRect i {
+	font-size: 42px;
+	font-size: 44px;
+	display: block;
+}
+.menuRectTitle {
+	position: relative;
+	/* height: 38px; */
+	/* background-color: #9f9f9f; */
+	/* background-color: #bbb; */
+	font-size: 12px;
+	padding: 16px 6px 16px 6px;
+	text-align: center;
+}
+.menuRectTitle > div {
+	position: absolute;
+	/* min-width: 120px; */ /* Prevents text from using 3 lines. */
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 6px 0 6px;
+}
+.menuRectBottom {
+	display: none;
+	padding: 4px;
+	height: 25px;
+}
+.menuRectBottom input {
+	margin: 0px;
+}
+
+.menuRect2Lines {
+	margin-top:4px;
+	font-size: 13px;
+	line-height: 14px;
+}
+.fixedTopBar {
+	/*
+	position:fixed;
+	left:0px;
+	right:0px;
+	*/
+	min-height: 48px;
+	/* z-index: 999; */
+	pointer-events: auto; /* so hover reaches navigation behind */
+}
+.fixedTopBarSpacer {
+	height: 48px;
+}
+.fixedTopBarBackground {
+	opacity: .5;
+	background-color: #222;
+	min-height: 61px;
+}
+.fixedTopBarBkgd {
+	/* background-color: rgba(22, 22, 22, 0.7); */
+	min-height: 48px;
+	-webkit-transition: height 0.5s, background-color 0.5s, -webkit-transform 0.5s;
+	transition: height 0.5s, background-color 0.5s, transform 0.5s;
+	/* z-index: 9999; */
+	width: 100%;
+}
+.fixedTopBarBkgdColor {
+	background-color: transparent;
+}
+.horizontalLogo {
+	/* margin: auto 0; */
+	padding-left: 10px;
+	float: left;
+}
+.horizontalLogo, .imageHeaderLogo {
+	-webkit-transition: -webkit-transform 3s;
+	transition: transform 3s;
+	pointer-events: auto;
+}
+.showApps {
+	padding-top: 8px !important;
+	pointer-events: auto;
+}
+.showAppsTopBar {
+	/* background-color: #333; */
+	padding-right: 6px;
+	margin-right: 10px;
+	float:left;
+	z-index: 500;
+	position: relative; /* To overlap header image */
+}
+.afterLogoInTopBar .showAppsTopBar i {
+	margin-top: -17px;
+}
+.fixedTopBar .threeDotNav {
+	position: absolute;
+	right:0;
+	z-index: 500;
+	pointer-events: auto;
+}
+.fixedTopBar {
+	position: absolute;
+	width: 100%;
+}
+@media (max-width: 800px) {
+	.fixedTopBar {
+		/* background-color: transparent; */
+	}
+	.menuRect {
+		/* width: 50%; */
+	}
+	.expandFromWidget {
+		display: none !important;
+	}
+	.bar-header {
+		display: none !important;
+	}
+	.horizontalTabs {
+		display: none !important;
+	}
+}
+@media (max-width: 800px) {
+	.fixedTopBar {
+		position: relative;
+	}
+	.fixedTopBarBkgd {
+		background-color: rgba(22, 22, 22, 0.5);
+	}
+	.menuRect {
+		/* width: 50%; */
+		max-width:200px;
+	}
+}
+.sideMenuText {
+	font-size: 10pt;
+	cursor:pointer;
+	color: #999;
+	text-decoration: none;
+	width:140px;
+	padding-top: 15px;
+	background: #333;
+}
+.sideMenuText:hover {
+	color: #ccc;
+}
+.hideMainMenu {
+	float:right;
+	padding: 12px 8px 0 0;
+	cursor:pointer;
+	margin-top:4px;
+	/* margin-right:-6px; */
+	color:#777;
+	font-size: 18px !important;
+}
+@media (max-width: 400px) {
+	.mainMenuSection {
+		min-width:300px; /* Prevents staggered alignment */
+		min-height:20px;
+	}
+}
+.menuRow {
+	clear:both;
+	min-height: 34px;
+	border-bottom: 1px solid #444;
+	margin-bottom: 8px;
+}
+.menuRow a {
+	color:#fff;
+}
+.menuRowSectionTitle {
+	background: #000;
+	font-size: 18pt;
+}
+.menuRowIcon {
+	min-width:32px;
+	float:left;
+	position: relative;
+}
+.menuRowTitle {
+	padding-top: 5px;
+	font-size: 12pt;
+	overflow:auto;
+}
+.menuRowButton {
+	float:right;
+	background: #333;
+	height: 32px;
+	width: 32px;
+	vertical-align: center;
+	padding:3px 0 0 4px;
+	margin:0 3px 3px 0;
+	border-radius: 16px;
+}
+#smartMenu {
+	/* display:none; */
+	/* background: #fff; */
+	overflow: auto;
+	/* width: 100%; */
+	flex: 1;
+	/* float:left; */
+	margin-right:-2;
+	position:relative;
+	/* border-bottom: 1px solid #ddd; */
+	/* box-shadow: rgba(0, 0, 0, 0.2) 0 3px 2px -2px; */
+}
+#smartOuter {
+	/* background-color: transparent !important; */
+	/* background-color: #ddd !important; */
+	background-color: rgba(22, 22, 22, 0.5);
+	/* box-shadow: 0px 10px 8px 0 rgba(0,0,0,0.5); */
+	/* border: 0px solid #ccc; */
+	/* max-height: 700px; */
+	/* overflow: auto; */
+}
+
+.sideTopMenu {
+	color:#fff;
+	font-weight: 400;
+	float:left;
+	padding-left: 2px;
+}
+.sideTopMenu div {
+	float:left;
+	/* margin-right:22px; */
+	padding: 15px 10px 5px 9px;
+	padding: 13px 10px 5px 9px; /* For one.html */
+	cursor: pointer;
+	font-family: 'Open Sans Condensed';
+	font-size: 18px;
+}
+.sideTopMenu span:hover {
+	border-bottom: 4px solid #555;
+}
+.sideTopMenu .active span {
+	border-bottom: 4px solid #4586F6; /* blue */
+}
+
+.smartTopMenu {
+	/* padding: 15px 0 2px 14px; */
+	color:#fff;
+	font-weight: 400;
+	/* background: #aaa; */
+	/* border-bottom: 1px solid #eee; */
+	background-color: rgba(44, 44, 44, 0.6);
+	background-color: rgba(55, 55, 55, 0.8);
+	padding-bottom: 30px;
+	border-bottom: 1px solid #444;
+	min-height: 42px;
+}
+.smartTopMenu div {
+	float:left;
+	/* margin-right:22px; */
+	padding: 15px 5px 5px 14px;
+	cursor: pointer;
+}
+.smartTopMenu span:hover {
+	border-bottom: 4px solid #555;
+}
+.smartTopMenu .active span {
+	border-bottom: 4px solid #4586F6; /* blue */
+}
+.appMenuInner {
+	padding-left: 6px;
+	padding-top: 4px;
+	background-color: rgba(33, 33, 33, 0.50);
+}
+.layerCheckboxes {
+	/* min-width: 500px; */
+	width: 100%;
+	/* padding: 20px 4px 20px 20px; */
+}
+.layerCheckboxes .dontsplit {
+	/* padding-bottom: 8px; */
+}
+.layerCheckboxes .first .dontsplit {
+	marginX:0px !important;
+	/* margin-right:10px !important; */
+	paddingX:0px !important;
+}
+.layerCbRow {
+	display:none;
+	padding: 1px 8px 7px 0px;
+	/* overflow: auto; */
+	/* background: #f3f3f3; */
+	/* margin-bottom:1px; */
+	color: #ddd;
+}
+.layerCbTitle {
+	white-space:nowrap;
+	margin-top: 6px;
+	margin-left: 22px;
+	margin-right: 25px;
+	font-size: 13pt;
+	pointer-events: none; /* Allow pass through */
+	font-family: 'Open Sans Condensed', sans-serif;
+	/* font-size: 16pt; */
+	line-height: 16px;
+}
+.layerCbRow:hover {
+	background:#ececec;
+	background:#000;
+}
+.layerAction {
+	clear:both;
+	float:right;
+	width: 100%;
+	z-index: 9999;
+	min-height: 27px;
+	cursor: pointer;
+	/* margin-right: 30px; */
+}
+.layerActionActive {
+	/* color: #3B99FC !important; */
+}
+.moduleJS .layerActionActive:before {
+	color:#fff;
+}
+.layerActionIcon {
+	margin-top: 2px;
+	float:right;
+	border-radius: 50%;
+	width: 21px;
+	height: 21px;
+	/* background-color: #272727; */
+}
+.layerActionIcon:before {
+	padding: 2px;
+	line-height: 23px;
+	font-size: 17px;
+	color: #bbb;
+	font-weight: 100;
+	font-family: "Material Icons";
+	content: "\E5D3"; /* Three dots */
+}
+.layerActionIconNoFeed:before {
+	content: ""; /* Blank since no feed for layer. */
+}
+.layerActionActive {
+	background-color: #3B99FC;
+}
+.layerActionActive:before {
+	padding: 1px;
+	font-size: 20px;
+	color: #000;
+	font-family: "Material Icons";
+	content: "\E876"; /* checkbox */
+	font-weight: 100;
+}
+.layersCB {
+	display: none;
+}
+.searchHeader {
+	/* overflow: visible; */
+}
+.navClone {
+	float: left;
+	background-color: rgba(55, 55, 55, 0.8);
+	margin:20px 0 20px 20px;
+	display:none;
+}
+.navClone .layerSectionTitle {
+	display: none;
+}
+.navClone .layerCbRow {
+	display: block;
+}
+.mapExtras {
+	position:absolute;
+	left:9px;
+	bottom:18px;
+}
+.mapPositionLowerRight {
+	position: absolute;
+	right:0;
+	width:400px;
+	z-index: 0;
+	background-color: #333;
+}
+.metaSideNav {
+	width:55px;
+	background-color: rgba(33, 33, 33, 0.8);
+}
+.leftPop {
+	display: none;
+	position: absolute;
+	overflow: auto;
+	margin-top: 48px;
+	margin-bottom: 10px;
+	background-color: #222;
+	/* border-top: 1px solid #555; */
+	border-right: 1px solid #555;
+	border-bottom: 1px solid #555;
+	z-index: 100;
+	width: 200px;
+}
+
+.leftTopItem {
+	padding: 4px 2px 7px 0px;
+}
+.leftTopItemLeftPadding {
+	padding-left: 14px;
+}
+.rightTopItem {
+    padding: 11px 4px 5px 10px;
+}
+
+.rightTopMenu {
+	position: absolute;
+	right: 0px;
+	z-index: 10;
+	min-width: 150px;
+}
+.rightTopMenu i {
+	color: #ddd !important;
+}
+.rightTopMenu {
+	background-color: rgba(33, 33, 33, 0.95);
+}
+.rightTopItem {
+    clear: both;
+    /* border:1px solid #fff; */
+    overflow: auto;
+    padding-left: 20px;
+    padding-right: 25px;
+    cursor: pointer;
+}
+.rightTopItem:hover {
+	background-color: #000;
+}
+.rightTopItem i {
+	width:40px;
+	min-height: 36px;
+}
+.rightTopItem span {
+	color:#fff;
+	padding: 5px 3px 8px 2px;
+	float:left;
+	color: #fff;
+}
+.rightTopItem .contactIcon {
+	font-size: 30px !important;
+	margin-top:-4px;
+	margin-left:-2px;
+	margin-right: 3px;
+}
+.rightTopItem .enlargeIcon {
+	font-size: 40px !important;
+	margin-top: -8px;
+	margin-left: -7px;
+	margin-right: 5px;
+}
+.leftTopItem i {
+	/* font-size: 28px; */
+	vertical-align: baseline;
+    margin-right: 10px;
+}
+.expandFromIFrame {
+	display: none;
+}
+.leftPopItem {
+	padding: 10px 20px 10px 12px;
+	cursor: pointer;
+	/* background-color: #111; */
+}
+.leftPop .leftPopItem:1st {
+	padding-topXXX: 40px;
+}
+.leftPopItem:hover {
+	background-color: #333;
+}
+.leftPopItem i {
+	float:left;
+	color: #555;
+	font-size: 28px;
+	margin: 0px;
+	margin-top: -3px;
+	margin-left: -5px;
+	padding: 5px 4px 0px 0px;
+	/*
+	padding: 10px 10px 8px 6px;
+	font-size:21pt;
+	*/
+}
+.leftPopItem div {
+	padding:4px 0 0 2px;
+	float: left;
+	color: #ddd;
+}
+.leftPopItem div:hover {
+	color: #fff;
+}
+.layerMenuButton {
+	padding: 10px 5px 5px 5px;
+}
+.layerMenuButton i {
+	font-size: 30px;
+}
+.hideLayerMenuButton i {
+	color:#fff;
+}
+.layerSideNav {
+	float: left;
+	/* padding: 20px; */
+	/*
+	background-color: rgba(44, 44, 44, 0.4);
+	background-color: rgba(33, 33, 33, 0.8);
+	border-right: 1px solid #444;
+	*/
+	/* padding-top: 12px; */
+	/*
+	background-color: rgba(250, 250, 250, 0.6);
+	background-color: rgba(22, 22, 22, 0.5);
+	background-color: rgba(11, 11, 11, 0.6);
+	*/
+	/* background-color: rgba(255, 255, 255, 0.8); */
+	min-width: 200px;
+	/* margin-right: 1px; */
+}
+.sideTip {
+	margin: 10px 6px 10px 0px;
+	float: right;
+	position: relative;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.sideTip:after {
+	bottom: 100%;
+	right: 0px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: rgba(240, 240, 250, 0.8);
+	border-bottom-color: rgba(0, 0, 0, 0.8);
+	border-width: 12px;
+	margin-left: -12px;
+}
+.layerSideNavTip {
+	padding: 10px 14px 10px 14px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	line-height: 13pt;
+	background-colorX: rgba(44, 44, 44, 0.8);
+	font-size: 10pt;
+	
+}
+.layerContent {
+	float: left;
+	width:100%;
+	margin-bottom: 40px;
+}
+.layerSideTop {
+	background-color: #444;
+}
+.smartNavTransitionX {
+	transition-timing-function: ease-out;
+	-webkit-transition: width 2s; /* Safari */
+	transition: width .7s;
+}
+
+#topMenuLinks {
+	display:none;
+}
+.listIcons {
+	float:right;
+	/* padding:4px 4px 0 0; */
+}
+.listIcons .material-icons {
+	font-size: 36px;
+}
+
+/* Widget */
+#smartPanel1 {
+	min-width: 300px;
+}
+
+/*
+#smartPanel1-holder {
+	border: 1px solid blue;
+	position:absolute;
+	z-index: 1;
+	width:100%;
+	font-size: 13.5px;
+	font-family: 'Open Sans', 'Helvetica Neue', HelveticaNeue, calibri, arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+#smartPanel1-holder table {
+  border-spacing:0px;
+}
+.smartPanel1-holder td {
+  padding:0px;
+  vertical-align: top;
+}
+.smartPanel1-holder a:visited {
+    color: #4091dd;
+}
+.smartPanel1-holder a:link {
+    color: #4091dd;
+}
+*/
+
+.mainMenuSection {
+	float:left;
+	margin: 0 30px 20px 0;
+	font-size: 9pt;
+	min-width:160px;
+	min-height:60px; /* Prevents gaps when sections have one line. */
+}
+.mainMenuTitle {
+	/* display: none; */ /* Remove to separate sections. */
+	color: #fff;
+	font-size: 26pt;
+	margin-bottom:20px;
+	font-family: 'Open Sans Condensed';
+	visibility: visible;
+	clear:both;
+	width:100%;
+	float:left;
+}
+.mainMenuTop {
+	display:none;
+	padding:6px;
+	background-color: rgba(44, 44, 44, 0.8);
+	color:#bbb;
+}
+.mainMenuSubtitle {
+	padding-top: 0px;
+	padding-bottom: 4px;
+	font-weight: 700;
+	color: #fff;
+}
+.mainMenuSection ul {
+	list-style-type: none;
+	font-weight: 400;
+	font-size:10pt;
+	margin-bottom:22px;
+	clear: both;
+}
+.mainMenuSection ul li:before {
+	content: "\2022 \0020";
+	font-size: 19px;
+	 vertical-align: bottom;
+}
+.mainMenuSection li {
+	margin:0px;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+/* MAP */
+
+#goSearch {
+	background-color: #555;
+	margin-right: 10px;
+	color:#fff;
+	border-radius: 5px;
+	padding: 8px 6px 0 8px;
+	min-height:42px;
+	min-width:28px; /* 42px too wide in embed */
+	vertical-align: middle;
+}
+#goSearch:hover {
+	background-color: #4586f6;
+}
+.goRide {
+	background: #888;
+	margin-left: 10px;
+	color:#fff;
+	border-radius: 5px;
+	padding: 0px 6px 0 8px;
+	min-height: 34px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.goRide:hover {
+	background-color: #4586f6;
+}
+
+.cartodb-searchbox, .cartodb-share {
+	/* display:none !important; */
+}
+div.cartodb-legend-stackX {
+	top: 20px !important;
+	/* right: 40px !important; *//* overridden by -move below */
+	left: 50px !important;
+	bottom: auto !important;
+}
+.leaflet-bar {
+	top: 10px !important;
+	/* right: 10px !important; */
+	/* left: auto !important; */
+}
+.leaflet-bar a {
+	/*
+	display:inline-block !important;
+	width:24px !important;
+	*/
+}
+.leaflet-bottom, .leaflet-top {
+	z-index: 0 !important;
+}
+.leaflet-top {
+	top: 32px !important;
+}
+.leaflet-control-containerX {
+	position: absolute;
+	top: -6px;
+	right: 45px;
+}
+.leaflet-draw {
+	padding-top: 12px;
+}
+.leaflet-left {
+	left: 10px !important;
+}
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+	font-size: 24px !important;
+	color: #777 !important;
+}
+.leaflet-retina .leaflet-draw-toolbar a {
+	color: #bbb !important;
+	background-size: 300px 36px !important;
+}
+.leaflet-bar a, .leaflet-bar a:hover {
+	width: 30px !important;
+	height: 30px !important;
+	color: #999 !important;
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon {
+    background-position: -34px -3px !important;
+}
+.leaflet-draw-toolbar .leaflet-draw-draw-rectangle {
+    background-position: -68px -3px !important;
+    color: #bbb !important;
+}
+.leaflet-draw-toolbar .leaflet-draw-draw-circle {
+    background-position: -101px -3px !important;
+}
+.leaflet-draw-toolbar .leaflet-draw-draw-marker {
+    background-position: -134px -3px !important;
+}
+
+.loadingIcon {
+	/* display: none; */
+	position: absolute;
+	top:150px;
+	bottom:0;
+	left:0;
+	right:80%;
+	z-index:999999;
+	/* BUGBUG this overlaps list when clicking Filters. Does not go away. */
+	background-imageX: url('http://data.georgia.org/menu/img/loading.gif');
+	background-size: 120px;
+	background-repeat: no-repeat;
+	background-position: center 50px;
+	pointer-events: none; /* Allow click through */
+}
+.loadingMap {
+	display: none;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:50%;
+	z-index:1;
+	background-image: url('http://data.georgia.org/menu/img/loading.gif');
+	background-size: 120px;
+	background-repeat: no-repeat;
+	background-position: center 50px;
+	pointer-events: none; /* Allow click through */
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.layerPanelHolder {
+	overflow: auto;
+	max-height: 900px;
+}
+.layerPanel {
+	/* padding: 20px; */
+	/* overflow: hidden; */
+	width: 100%;
+	/* margin-top: 48px; */
+}
+#layerBox {
+	padding-bottom: 12px;
+	/* background-color: rgba(22, 22, 22, 0.6); */
+	background-color: rgba(33, 33, 33, 0.98);
+	/* background-color: rgba(55, 55, 55, 0.8); */
+}
+#layerBoxXX {
+	background: #fff;
+	border:1px solid #999;
+	border-top:0px;
+	border-radius: 0 0 4px 4px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 2px;
+	margin-bottom: 12px;
+}
+#layerBoxInner {
+	/* display:none; */
+	position: relative;
+	/* margin: 12px; */
+}
+
+#showSearch, .hideSearch, #hideEmbed, #hideHoneycomb {
+	cursor: pointer;
+}
+#showEmbed, #hideEmbed {
+	cursor: pointer;
+}
+.iconFilterRight {
+	padding:0 4px 8px 8px;
+	/* text-shadow: 2px 2px 8px rgba(0, 0, 0, .8); */
+}
+#hideSearch {
+	/* color: #555; */
+}
+#hideSearch:hover {
+	color:#fff;
+}
+#hideHoneycomb {
+	color:#ccc;
+	padding:8px;
+}
+.honeySubtitle {
+	font-size: 29px;
+	line-height: 30px;
+}
+.formHolder {
+	clear: both;
+	width:100%;
+	background-color: #fff;
+	z-index: 300;
+	padding-left: 60px;
+	padding-right: 30px;
+	margin-bottom: 64px; /* Since fixed button overlaps */
+	box-sizing: border-box;
+	min-height:500px;
+	/* max-width: 397px; */
+}
+.mapbuttons {
+	/* margin-left:16px; */
+	float:right;
+	/* width:100%; */
+	display: none;
+	padding-top: 16px;
+	/* height:55px; */
+	overflow: hidden;
+	/* border-bottom: 1px solid #999; */
+	/* padding-right:12px; */
+}
+.moduleJS #panelDividerLine {
+	display:none;
+}
+@media (max-width:800px) {
+	.mapbuttonsX {
+		position: fixed;
+		padding-top: 0px;
+		overflow: hidden;
+		padding:12px;
+		bottom:0;
+		background-color: #333;
+		width:100%;
+		z-index: 9999999;
+	}
+}
+.mapbuttons-in-header {
+	margin:16px 0 0 0;
+	display: block;
+}
+.layerbutton {
+	position: relative;
+	z-index: 1;
+	background-color: rgba(255, 255, 255, .9);
+	height: 31px;
+	float: left;
+	cursor: pointer;
+	border: 1px solid #999;
+	border-radius: 4px;
+}
+.detailbutton {
+	cursor: pointer;
+	border: 1px solid #999;
+	border-radius: 4px;
+	padding: 4px 10px 4px 10px;
+	margin-top:6px;
+}
+.detailbutton:hover {
+	background: #aaa;
+	color:#fff;
+}
+.mapbutton {
+	position: relative;
+	background-color: rgba(255, 255, 255, .9);
+	/* margin: 0 0px 0px 12px; */
+	/* overflow: hidden; */
+	height:36px;
+	/* clear:both; */
+	float: left;
+	cursor: pointer;
+	border: 1px solid #999;
+	border-radius: 4px;
+	/* box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 4px 2px; */
+	z-index: 1000;
+}
+.mapbuttons .mapbutton:last-of-type {
+	margin-right:0px;
+}
+.mapbutton:hover {
+	background-color:#fff;
+}
+.mapbutton .mapIcon {
+	background-color: rgba(100, 100, 100, .2);
+	float:left;
+	width:35px;
+	height: 34px;
+	cursor: pointer;
+	font-size:32px;
+	color:#fff;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+.mapbutton .mapIconSvgHolder {
+	padding-top:0px;
+	padding-left:5px;
+}
+.mapbutton .mapIconSvg {
+	-webkit-filter: drop-shadow( 1px 1px 3px #000 );
+    filter: drop-shadow( 1px 1px 3px #000 );
+}
+.mapbutton img { /* fixes hideLegend mapButtonHot */
+	height:21px;
+	padding-left:7px;
+}
+
+.moduleJS .panelMinHeight {
+	min-height: 550px;
+}
+
+.moduleJS .listPanelHolder {
+	/* background-color: #fff; */
+	/* margin-left: 100px; */
+	/* top: 58px; */
+	right: 18px;
+	z-index: 2;
+}
+.moduleJS .listHeader {
+	min-height: 45px;
+	/* background-color: #ccc; */
+	overflow: visible;
+	position: relative;
+	padding: 6px 7px 0 0;
+	border-bottom: 1px solid #ccc;
+}
+.moduleJS .sidetop {
+	padding: 16px;
+	border-bottom: 1px solid #ddd;
+	line-height: 1.4em;
+}
+.moduleJS .dragContentX {
+	overflow: auto;
+	cursor: move;
+
+	/* Dashed Lines */
+	/*
+	background-color: #eee;
+	background-image: linear-gradient(transparent 50%, rgba(255,255,255,.8) 50%);
+	background-size: 5px 5px;
+	*/
+
+	position: absolute;
+	top:0px;
+	left:0;
+	right:0;
+}
+.moduleJS .drag {
+	cursor: move;
+	bottom: 0px;
+}
+.moduleJS .dragTop {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 6px;
+	cursor: row-resize;
+}
+#mapTabsPanel {
+	left: 56px;
+}
+@media (max-width:800px) {
+	#mapTabsPanel {
+		/* position: relative; */
+		width:100%;
+		left:auto;
+		right:auto;
+	}
+}
+.mapbuttons {
+	float:left;
+}
+.mapbutton {
+	/* margin: 0 12px; */
+}
+
+@media (min-width: 801px) {
+	.moduleJS .mapButtonHot {
+		margin-bottom: 0px;
+		border-bottom: 1px solid #ddd;
+		margin-right: 6px;
+		border: 0px solid #fff;
+		background-color: #fff;
+		height: 42px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		box-shadow: rgba(0, 0, 0, 0.2) 4px 0 5px -2px;
+		padding-top: 2px;
+	}
+}
+.mapButtonHot .mapbuttonText {
+	padding: 10px 10px 12px 4px;
+}
+
+.mapButtonHot .mapIcon {
+	background-color: rgba(120, 120, 120, .7);
+	background-color: #fff;
+	padding-left:2px;
+}
+@media (max-width:800px) {
+	.mapbutton {
+		border: 0px solid #000;
+		height: 34px;
+	}
+	.mapButtonHot .mapIcon {
+		background-color: blue;
+	}
+}
+.showLegend .mapIcon img {
+	/*width:34px;*/
+	width:30px;
+	padding:0 4px 2px 7px;
+}
+
+.mapbuttonText {
+	margin-top: 0px;
+	padding: 10px 6px 12px 8px;
+	margin-bottom: 10px;
+	float:left;
+	color: #333;
+}
+.cartodb-legend-stack {
+	border:0px solid #fff !important;
+}
+.cartodb-legend-stack-move {
+	position: relative !important;
+	top:0 !important;
+	right:0 !important;
+	left:0 !important;
+	bottom:0 !important;
+	margin-bottom: 10px;
+	border-radius: 0 0 4px 4px !important;
+	border-top: 0px !important;
+}
+.mapIconImg {
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+#addLayer {
+	z-index: 1;
+	cursor: pointer;
+}
+.settingsPanel {
+	position:absolute;
+	right:0;
+	z-index: 101;
+	display:none;
+	color: #cfcfcf;
+	background-color: #353535;
+	box-sizing: border-box;
+	/* border: 1px solid #ccc; */
+	padding: 14px 24px 24px 24px;
+	/* padding-right: 40px; */
+	margin:0 0 17px 0;
+	width:45%;
+	float:right;
+}
+.accountPanel {
+	position:absolute;
+	right:0;
+	z-index: 101;
+	display:none;
+	color: #cfcfcf;
+	background-color: #353535;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	padding: 24px;
+	margin:0 0 17px 0;
+	width: 300px;
+	floatX:right;
+}
+.accountButton {
+	cursor: pointer;
+}
+.setDiv {
+	clear: both;
+	/* float:left; */
+	width:100%;
+	border-bottom: 1px solid #ddd;
+	margin: 10px 0 10px 0;
+}
+.setLeftX {
+	float:left;
+	min-width: 250px;
+	font-size: 16px;
+	padding-topX: 8px;
+	padding-bottomX: 4px;
+	position: relative;
+}
+.setLeftX div {
+	position: absolute;
+	left:0;
+	right:0;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.setLeft {
+	float:left;
+	max-width: 250px;
+	font-size: 16px;
+	/* position: relative; */
+	/* display: flex; */
+	/* align-items: center; */
+}
+.setLeft div {
+
+}
+
+.moduleJS .setOverflow {
+	overflow: auto;
+	min-width: 120px;
+}
+.moduleJS .setRight {
+	float: right;
+}
+.moduleJS .setRight select, .moduleJS .setRight input {
+	min-width: 240px;
+}
+
+@media (max-width: 1000px) {
+	.moduleJS .settingsPanel {
+		width:55%;
+	}
+}
+
+.listPanelInner {
+	background-color: #fff;
+	/* padding-top: 20px; */
+	min-width: 250px;
+}
+.listPanelContent {
+	background: #fff;
+	z-index: 300;
+	/* padding-right: 25px; */
+	/* border-left:1px solid #ccc; */
+	display: block;
+	/* overflow: auto; */
+	/* max-height: 604px; */ /* Also adjust .listPanel so list can be scrolled to bottom. */
+}
+
+.detailsPanelContent {
+	background:#fff;
+	z-index: 300;
+	overflow: auto;
+	max-height: 630px;
+}
+#hideDetails {
+	float:right;
+	cursor:pointer;
+	padding:6px;
+	/* padding-right:7px; */
+	color:#888;
+}
+.detailsPanel {
+	background:#fff;
+	/* box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.25); */
+	min-width: 250px;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	/* overflow: visible; */
+	/* z-index: 99999999; */
+	/* float: left; */
+	/* width: 100%; */
+}
+
+
+.directoryBackLink i {
+	color:#ccc;
+	font-size:28px;
+	float:left;
+	margin:0 6px 0 -28px
+}
+#detailsName {
+	/* white-space: nowrap; */
+	/* float:left; */
+	overflow: auto;
+	padding:6px 4px 12px 0;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 20pt;
+	font-family: 'Open Sans Condensed';
+}
+.detailsEdit {
+	margin-right: 4px;
+}
+.detailsPanelPadding {
+	padding: 8px 3px 2px 16px;
+	/* margin-bottom: 10px; */
+	background-color: #f3f3f3;
+	background-color: #fff;
+	border-bottom: 1px solid #ddd;
+	/* font-size: 18pt; */
+	/* position:absolute; */
+	/* left:0; */
+	/* right:0px; */
+	min-height:40px;
+	overflow: auto;
+}
+.gridListHeader {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+.listPadding {
+	padding-top: 4px;
+	/* border-right:1px solid #ccc; */
+	/* margin-right: 25px; */
+}
+.detailsPadding {
+	/* padding: 12px 0px 12px 0; */
+	/* overflow: visible; */
+}
+.textHero {
+	/* color: #444; */
+	/* font-family: 'Open Sans Condensed', sans-serif !important; */
+}
+.textHighlight {
+	font-size: 14px;
+	color:#fff;
+	text-shadow: 2px 2px 2px rgba(22, 22, 22, 1);
+	cursor: pointer;
+
+	/* font-weight: 800; */ /* Delays display */
+}
+.textHighlight:hover {
+	color:#fff;
+	text-shadow: 2px 2px 2px rgba(0, 22, 22, 1);
+}
+.textArrow {
+	float:left;
+	padding:0;
+	margin:0px;
+	line-height:12pt;
+	font-size:12pt
+}
+.corners {
+	border-radius: 3.5px;
+}
+#iframeHolder {
+	background-color: #fff;
+}
+
+/* FILTER */
+.filterWrapper {
+	/* padding-bottom: 18px; */
+	position: relative;
+	/* text-align: center; */
+	z-index: 1; /* For full screen expand */
+}
+.filterWrapperLeft {
+	padding-left: 50px;
+}
+.hideFiltersClick i, .showFiltersClick i {
+	font-size: 27px;
+}
+.filterWrapper .hideFilters {
+	color:#ccc;
+	position: absolute;
+	top:4px;
+	right:6px;
+	/* z-index: 10; */
+	font-size:26px;
+	margin:0px;
+	padding:4px;
+	/* background-color: rgba(33, 33, 33, 0.3); */
+	border-radius: 50%;
+	z-index: 2;
+}
+.listPanel {
+	/* z-index: 2; */
+	background: #fff;
+	border-left: 1px solid #ccc;
+	overflow: hidden;
+	pointer-events: auto; /* Catch click through */
+	/* margin-top: 20px; */
+}
+.contentPanelAbsolute { /* no longer used */
+	z-index:2;
+	position:absolute;
+	background-color: #fff;
+}
+.contentPanel {
+	/* z-index: 1; */
+	/* position: relative; */
+	width:100%;
+	/* margin-left:30px; */
+}
+.detailsScroll {
+	max-height: 630px;
+	overflow: scroll;
+}
+
+.introPanel {
+	width: 100%;
+}
+.introLeft {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+@media (min-width: 801px) {
+	.introLeft {
+		/* width: 60%; */
+	}
+}
+.layerIntro {
+	padding-bottom: 10px;
+	float:left;
+	line-height: 20px;
+}
+.layerIntro > h2 {
+	padding-bottom:6px;
+}
+.layerIntroRightWidth {
+	/* width: 40%; */
+}
+.listPanelPercent {
+	max-width: 45%;
+
+	width:400px;
+	max-width:400px;
+
+	box-sizing: border-box;
+	height:100%;
+	top:0;
+	bottom:0;
+	/* position: absolute; */
+	/* Blocks map */
+	/* height:650px; */ /* Also adjust .listPanelContent so list can be scrolled to bottom. */
+	/* right: 0; */
+	/* top: 0; */
+	/* bottom: 0; */
+	pointer-events: none; /* Allow click through */
+}
+.listPanelPercentMax {
+	width:100%;
+	max-width:100%;
+}
+.besideLeft {
+	margin-left:45%;
+	border-left:1px solid #ccc;
+}
+#mapTabsPanel {
+	max-height: 655px;
+	z-index:2;
+	position:absolute;
+	left: 70px;
+	top: 4px;
+	overflow: hidden;
+}
+.rightPercent {
+	width:45%;
+	min-width: 800px;
+	float:right;
+}
+.rightPercentMax {
+	/* max-width:45%; */
+	float: right;
+}
+.rightAbsolute { /* For mapbuttons */
+	position: absolute;
+	top:12px;
+	left:55%;
+	right:0;
+}
+
+/*
+@media (max-width: 1000px) {
+	.moduleJS .rightPercent {
+		width:55%;
+	}
+	.moduleJS .rightPercentMax {
+		max-width:55%;
+	}
+}
+*/
+.fieldsLeft {
+	padding: 10px 20px 0 7px; /* Top padding allows logo to be cleared */
+	/* float: left; */ /* Applied only when logo in header. Otherwise causes menus to fall on multiple lines with aerospace */
+	/* width: 100%; */
+	/* overflow: visible; */ /* auto crops off location menu */
+	display: inline-block;
+	position: relative;
+}
+.filterBackground {
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.9);
+	/* border-bottom: 1px solid #ddd; */
+	float: left;
+	width: 100%;
+}
+#filterPanelHolder {
+	/* display: none; */
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+#filterPanel {
+	display: none;
+	/* padding: 5px 0 10px 15px; */
+	/* margin-top: 20px; */
+	position: relative;
+	/* float:left; */
+	width:100%;
+	box-sizing: border-box;
+	overflow: visible;
+}
+.topColor {
+	/*
+	background-color: rgba(250, 250, 250, 0.9);
+	background-color: rgba(22, 22, 22, 0.3);
+	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(250, 250, 250, 0.6);
+	*/
+	/* background-color: rgba(255, 255, 255, 0.8); */
+}
+.headerLeftXXX {
+	position:relative;
+	float:left;
+	padding: 0 8px 0 50px;
+	padding-bottom: 15px;
+	background-colorX: rgba(22, 22, 22, 0.3);
+	background-colorX: rgba(250, 250, 250, 0.8); /* Nice white */
+	background-colorX: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	/* overflow: auto; */
+}
+.tabSections {
+	position:relative;
+	/* float:left; */
+	min-width: 320px;
+	/* width: 100%; */
+	z-index: 1;
+}
+.filterPanelAbsolute {
+	position: absolute !important;
+	left:0;
+	right:0;
+	background-color: #ddd;
+}
+#filterPanelInner {
+	/* overflow: visible; */ /* Prevents falling below close X. */
+	display: inline; /* Allows width of filters to set rightwidth. */
+}
+#filterPanelDark { /* Applied when video or background image */
+    background-color: rgba(22, 22, 22, 0.6);
+}
+#mapPanel {
+	/* height:700px; */ /* also set on #map */
+	overflow: hidden;
+	/* width: 100%; */
+	background:#fff;
+}
+
+#defaultWidget {
+	display: none;
+	clear:both;
+	/* min-height:120px; */
+	color: #fff;
+	font-size: 16px;
+	font-family: Raleway,sans-serif;
+	font-family: 'Open Sans Condensed';
+	font-size: 28px;
+}
+.imageHeaderLogo img {
+	height: 86px;
+	padding: 8px 14px 4px 26px;
+	/* margin-top: 7px; */
+	-webkit-transition-property: width, height; /* Safari */
+	-webkit-transition-duration: .5s; /* Safari */
+	transition-property: width, height;
+	transition-duration: .5s;
+}
+@media (max-width: 1200px) { /* For mobile */
+	.imageHeaderLogo img {
+		height: 82px;
+		padding: 4px 8px 4px 8px;
+		margin-top: 5px;
+	}
+}
+@media (max-width: 1100px) { /* For mobile */
+	.imageHeaderLogo img {
+		height: 65px;
+	    padding: 4px 8px 4px 8px;
+	    margin-top: 5px;
+	}
+}
+@media (max-width:800px) { /* For mobile */
+	.imageHeaderLogo img {
+		height: 50px;
+	    padding: 4px 8px 4px 8px;
+	    margin-top: 5px;
+	}
+	#headerHeightX {
+		height: 60px !important;
+	}
+	.moduleJS #map {
+		height: 500px;
+	}
+	/* Always show scrollbar, except on mobile since it resides beside fixed header. */
+	.moduleJS ::-webkit-scrollbar {
+	    -webkit-appearance: none;
+	    width: 7px;
+	}
+	.moduleJS ::-webkit-scrollbar-thumb {
+	    border-radius: 4px;
+	    background-color: rgba(0,0,0,.25);
+	    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+	}
+	.layerCbTitle {
+		line-height: 20px;
+	}
+}
+.moduleJS #directoryPanel {
+	background-colorXX:rgba(0, 0, 0, 0.6);
+	padding:4px 0 0 4px;
+	max-height: 640px;
+}
+
+.filterArrow {
+	position:absolute;
+	right:0px;
+	padding:6px 7px 0 0;
+}
+.filterBubbleHolder {
+	position:relative;
+	overflow:visible;
+}
+.filterBubble {
+	-webkit-transition: 0.3s ease-in-out;
+	-moz-transition: 0.3s ease-in-out;
+	-o-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+	-webkit-transition-property: width;
+	-moz-transition-property: width;
+	-o-transition-property: width;
+	transition-property: width;
+	display: block;
+	-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+	box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+	border-radius: 6px;
+	border: 1px solid #d0d5cb;
+	position: absolute;
+	top:15px;
+	left: 0px; /* was left:-14px */
+	z-index: 10;
+	background: #fff;
+	padding: 15px;
+	vertical-align: baseline;
+}
+.filterUL {
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	column-count: 1; /* Switch these 3 back to 2 after activating https for nearby geolocation lookup. */
+	list-style: none;
+	padding-left: 0;
+	font-size: 12pt;
+	margin-bottom: 0px !important;
+}
+.filterUL li.selected a {
+	color: #000;
+	font-weight: bold;/* Loads too slow when bold */
+}
+.filterUL li {
+	padding: 8px;
+	margin-left: -6px;
+}
+.filterUL li:hover {
+	background-color: #f6f6f6;
+	border-radius: 5px;
+    cursor: pointer;
+}
+.filterUL li a {
+	color: #888;
+	text-decoration: none;
+}
+.filterUL li a:hover {
+    text-decoration: none;
+}
+.uparrow {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	position: absolute;
+	top: 5px;
+	margin-left: -10px;
+}
+.uparrow-grey {
+	border-bottom: 10px solid #aaa;
+	z-index: 9998;
+}
+.uparrow-white {
+	border-bottom: 10px solid #fff;
+	margin-top: 1px;
+	z-index: 9999;
+}
+.flip-horizontal { /* not in use */
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+}
+.navTop {
+	background-color: rgba(55, 55, 55, 0.4);
+	background-color: rgba(33, 33, 33, 0.6);
+	width:100%;
+	margin:0 auto;
+	/* z-index: 100; */
+	/* min-height: 88px; */ /* Since font loading may be initially shorter. Height determines siteHeader, which is used for siteHeaderSpacer offset. */
+
+	/* min-height: 200px; */
+}
+.siteHeaderSpacer {
+	/* display:none; */
+}
+@media (min-width: 801px) {
+	.smartMainHolder {
+		/* margin: 0 6px 12px 6px; */
+	}
+}
+.menuOverVideo {
+	position: absolute;
+	top: 150px;
+	/* margin: 160px 0 0 20px; */
+	/* z-index: 1; */
+}
+.filterOverVideo {
+	position: absolute;
+	top: 100px;
+	right: 0px;
+}
+.navTopOverVideo {
+	display: none; /* prevent navTop from blocking click to video */
+	/*
+	max-width: 100%;
+	background-color: rgba(33, 33, 33, 0.6) !important;
+	*/
+}
+.navTopHolder {
+
+}
+.navTopHeightX {
+	min-height: 50px;
+}
+.navTopAlignment {
+	text-align: center;
+	/* text-align: right; */
+	/* margin-right: 20px; */
+}
+.navTopAlignmentFull {
+	text-alignX: left;
+	margin-leftX: 42px;
+}
+.navTopLeft {
+	/* overflow:auto; */
+	/* float: left; */
+	/* text-shadow: 2px 2px 2px rgba(0, 22, 22, 1); */
+	/* min-height: 100px; */
+}
+.navTopLeftWidth {
+	float:left;
+	/* min-height: 100px; */
+}
+.navTopLeftWidthWide {
+	width:200px;
+	/* border-right:1px solid #555; */
+	/* margin-right:14px; */
+	background-color: rgba(55, 55, 55, 0.8);
+	/* position: fixed; */
+	z-index: 200;
+	/* -webkit-box-shadow: 3px 0 5px -2px #888; */
+	/* box-shadow: 3px 0 5px -2px #888; */
+	border-right: 1px solid #555;
+}
+.sideNavTop {
+	min-height:46px;
+	background-color: rgba(66, 66, 66, 0.8);
+}
+.navTopLeftClose {
+	padding: 10px;
+	float: right;
+}
+.navTopLeftIcon {
+	background-color: #fff;
+	float: left;
+	margin-top: 4px;
+}
+.navTopLeftIcon i {
+	paddingX: 8px 13px 2px 7px;
+	font-size: 23pt;
+	/* color: #ddd; */
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, .5);
+}
+.navTopLeftIcon i:hover {
+	color: #fff;
+	text-shadow: 2px 3px 3px rgba(0, 0, 0, .75);
+}
+.navTopLeftIconX div {
+	padding-top: 10px;
+}
+.navTopLeftMargin {
+	margin-left:10px;
+}
+.showCurrentSection {
+	float:left;
+	padding-top: 8px; /* Then set to 14px in menu-new */
+	cursor: pointer;
+	min-height: 40px; /* Prevents croping of title bottome. Also makes header taller. */
+	color: #fff;
+	box-sizing: border-box;
+	font-familyX: 'Open Sans Condensed';
+	font-family: 'Roboto Condensed', sans-serif;
+	font: normal 24px "Roboto Condensed",Arial,sans-serif;
+	/* font-size: 20pt; */
+	/* line-height: 24pt; */
+	padding-top: 13px; /* Otherwise 8px. Something in header is causing height of contained divs to overlap top padding. */
+	text-shadow: rgba(0, 0, 0, .8) 2px 2px 2px;
+	/* text-align: center; */
+	/* min-height: 69px; */
+}
+@media (min-width: 501px) {
+	.showCurrentSection {
+		padding-top: 20px;
+	}
+}
+.showCurrentSectionLg {
+	font-size: 26px;
+	/* padding-top: 24px !important; */
+	/* padding-bottom: 30px; */
+}
+.hideLeftPop {
+	color:#fff !important;
+	background: #000;
+	padding: 20px;
+	padding-left: 16px;
+	/* padding-right: 28px; */
+	height:54px;
+	float:left;
+	width: 50px;
+}
+.hideLayers i {
+	color: #fff;
+}
+.actionMenu {
+	background-color: rgba(33, 33, 33, 0.50);
+}
+.actionMenu a {
+	color: #eee;
+}
+.actionMenu a:hover {
+	color: #fff;
+}
+#sectionNavigation {
+	/* Avoid using margin-top. Fowls up offset calculation. */
+	/* padding-top: 35px; */
+	margin-right:30px;
+	float:left;
+	background-color: rgba(44, 44, 44, 0.4);
+}
+.sectionBack {
+	float:left;
+	padding-right: 0px;
+	min-width: 36px;
+}
+.backLink {
+	/* border:1px solid #777; */
+	height:24px;
+	width:24px;
+	/* background-color: rgba(0, 0, 0, 0.5); */
+}
+.backLink:hover {
+	background-color: rgba(33, 33, 33, 0.8);
+	border:1px solid #fff;
+}
+.backLink a {
+	padding:1px 0 0 1px;
+	color: #777;
+}
+.backLink a:hover {
+	color: #fff;
+}
+.backLink a i {
+	font-size:22px;
+}
+
+#showSettings {
+	/* color: #aaa; */
+}
+#showSettings:hover {
+	color:#fff;
+}
+.settingsIconBox {
+	padding:6px 4px 4px 4px;
+	border:1px solid #777;
+	float: left;
+}
+.settingsIconBox:hover {
+	border:1px solid #777;
+}
+.sectionArrowHolder {
+	float:right;
+	padding:4px;
+	padding-right:8px
+}
+.leftArrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0px 5px 8px;
+	border-color: transparent transparent transparent #777;
+}
+.leftArrow:hover {
+	border-color: transparent transparent transparent #999;
+}
+.downArrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #555 transparent transparent transparent;
+	margin: 0px 0px 0 0;
+}
+.downArrow:hover {
+	border-color: #999 transparent transparent transparent;
+}
+.downArrowLg {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 8px 0 8px;
+	border-color: #777 transparent transparent transparent;
+}
+.downArrowLg:hover {
+	border-color: #999 transparent transparent transparent;
+}
+.topSearchIcon {
+	float:left;
+	font-size:29px !important; /* Until material-icons is overridden. */
+	color:#555;
+	padding-left:8px;
+}
+.topSearchIcon:hover {
+	color: #777;
+}
+
+.moduleJS #categoryMenu {
+	margin-left: 12px;
+	/* min-width: 200px; */
+}
+.moduleJS .categoryMenuSet {
+	float:left;
+}
+.moduleJS .sectionTitleText {
+	/* font-size: 12pt; */
+	/* color: #aaa; */
+	float: left;
+	padding-right: 10px;
+	/* padding-left: 8px; */
+	/* width: 100%; */
+}
+.moduleJS .sectionTitle {
+	color:#444;
+	cursor: pointer;
+	font-size: 26pt;
+	float:left;
+	/* padding: 20px 0 0 30px; */
+	padding-top: 20px;
+	padding-bottom: 5px;
+	padding-left: 4px;
+	font-family: sans-serif;
+	font-family: 'Open Sans Condensed';
+	/* text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); */
+}
+@media (max-width: 1000px) {
+	.moduleJS .sectionTitle {
+		/* max-width: 300px; */
+	}
+}
+.moduleJS .underSectionTitle {
+	clear:both;
+	margin-bottom: 17px;
+}
+.moduleJS .sectionCatMains {
+	margin-bottom: 8px;
+}
+.moduleJS #hideSectionCategoriesX {
+	color: #555;
+	font-size: 18px;
+}
+.moduleJS #sectionCategoriesToggle {
+	cursor: pointer;
+	/* margin-left: 10px; */
+	/* margin-bottom: 15px; */
+}
+
+#sectionCategories {
+	z-index: 2;
+	float: left;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+#sectionCategories .sectionCat {
+	padding: 0 15px 0 15px;
+	/* float:left; */
+}
+#sectionCategories .sectionCat input {
+	float: left;
+	margin: 10px 10px 0 0;
+	background-color: #ccc;
+}
+#sectionCategories .sectionCat label {
+	/*
+	font-size: 22pt;
+	line-height: 26pt;
+	*/
+	font-size: 16pt;
+	line-height: 20pt;
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	display: block;
+	white-space: nowrap;
+	padding-right: 20px;
+	cursor: pointer;
+	overflow: visible;
+}
+#sectionCategories .sectionCat label div {
+	padding: 0 5px 0 5px;
+	width: 100%;
+}
+#sectionCategories .sectionCat label:hover {
+	color: #fff;
+	cursor: pointer;
+}
+#sectionCategories .sectionCat a {
+	text-decoration: none;
+}
+
+.sectionMenuSubCat {
+	float:left;
+	border:1px solid #fff;
+	padding:20px;
+	background: rgb(51, 51, 51);
+	opacity: 0.85;
+}
+.sectionMenuSubCat > li {
+	font-size: 18px;
+	line-height: 26px;
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-transform: lowercase;
+}
+.sectionMenuSubCat > li {
+	text-transform: capitalize;
+}
+.sectionMenuSubCat > li > input {
+	margin-right: 6px;
+}
+.filterCheckboxTitle {
+	font-size: 10pt;
+	margin-left: 8px;
+}
+.filterClick {
+	cursor: pointer;
+	border-radius: 6px;
+	border: 1px solid #d9d9de;
+	line-heightX: 22px;
+	padding: 9px 9px 9px 14px;
+	vertical-align: baseline;
+	background-color: #fff;
+	color: #121a0d;
+	/* margin-bottom: 8px; */
+}
+#filterClickLocation {
+	/* Fix for embed */
+	box-sizing: border-box;
+	padding: 5px 9px 7px 14px;
+}
+.filterClick { /* Also applies to logistics */
+	min-height: 32px;
+	text-shadow: none;
+}
+.filterClick:hover {
+	background: #f6f6f6;
+}
+.filterLabel {
+	font-size: 10pt;
+	min-height: 20px;
+}
+.filterField {
+	float:left;
+	padding: 0 8px 9px 0;
+	position: relative;
+}
+.filterField div {
+	/* margin-bottom: 2px; */
+}
+.filterField input[type=checkbox] {
+	margin:0 8px 6px 0;
+}
+.filterFieldText {
+	color: #fff;
+}
+.logisticsDesignation {
+	font-sizeX: 16px;
+}
+.typeCB { /* Category checkboxes */
+    white-space: nowrap;
+    margin-left: 10px;
+    margin-right: 4px;
+    display:block !important;
+    font-size: 24px !important;
+	border-bottom:1px solid #ccc;
+}
+.typeCB label {
+	font-family: 'Open Sans Condensed', sans-serif;
+	margin-left:10px;
+	margin-right:10px;
+	font-size: 13pt !important;
+	font-weight: 500;
+	color:#777;
+}
+.moduleJS .sectionProviderTitle, .moduleJS .sectionProviderTitleSm {
+	color: #fff;
+	font-size: 14pt;
+	line-height: 34pt;
+	font-family: 'Open Sans Condensed', sans-serif;
+	/* margin-left: 30px; */
+	cursor: pointer;
+}
+.sectionProviderTitleSm {
+	padding-left:8px;
+	padding-right: 34px;
+	font-size:16pt;
+	font-weight: 400;
+}
+.buttonUnderCategories {
+	color:#fff;
+	font-size: 12px;
+	padding:8px 12px 8px 12px;
+	cursor: pointer;
+	display:inline-block;
+	background: #555;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 8px;
+}
+
+.moduleJS .fadeinX {
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+.moduleJS .buttonUnderCategories:hover {
+	background-color:#333;
+}
+.moduleJS .row {
+  display: flex; /* equal height of the children */
+}
+.moduleJS .col {
+  flex: 1; /* Optional. Apply for equal width on children under .row */
+}
+.moduleJS #mapBar {
+	background-color: rgba(250, 250, 250, 0.80); /* For Hero version. */
+	background-color: rgba(255, 255, 255, 0.95); /* For Hero version. */
+	float:left;
+	width:100%;
+	box-sizing: border-box;
+	/* min-height: 52px; */
+	overflow: visible;
+	z-index: 10;
+}
+.moduleJS .mapBarDrag {
+	width:100%;
+}
+.moduleJS .topBarLeft {
+   padding-left: 10px;
+}
+.moduleJS .mapBarLeft:blank {
+   display: none;
+}
+.moduleJS .mapBarLeft {
+	overflow: visible;
+	/* padding-top: 4px; Caused gap above map. */
+	/* padding: 15px 10px 0 20px; */
+	/* padding-left: 20px; */
+	/* padding-left: 30px; */
+	/* margin-left: 40px; */
+	/* border-right: 1px solid #fff; */
+	/* background-color: rgba(250, 250, 250, 0.85); */
+	/* background-color: rgba(240, 240, 240, 0.95); */
+	flex: 1; /* Spans space, equivalent to overflow:auto */
+	/* min-height: 44px; created gap */
+	/* width: 100%; */
+	/* display: none; */
+}
+.moduleJS .layerTitleMapBar {
+	padding-bottom: 10px;
+}
+.moduleJS .showLayersMapBar i, .moduleJS .hideLayersMapBar i {
+	font-size:32px;
+	color:#aaa;
+	/* margin-left:-12px; */
+	/* padding-left: 15px; */
+	float: left;
+}
+.moduleJS .mapBarRight {
+	position: relative; /* To overlap on mobile header. */
+	/* right:0; */
+	/* top:0; */
+	/* bottom:0; */
+	padding-top: 4px;
+	padding-right: 3px;
+	/* overflow: visible; */
+	/* background-color: rgba(240, 240, 240, 0.75); */
+	/* background-color: rgba(240, 240, 240, 0.95); */
+	box-sizing: border-box;
+	/* z-index: 999; */
+}
+.moduleJS .paginationControls {
+	/* margin-top: 9px; */
+	float: right;
+	/* background: #C4C4C4; */
+}
+.moduleJS .layerNav {
+	float:left;
+}
+.moduleJS .layerTitleAndArrow {
+	float: left;
+	margin-right: 18px;
+}
+.moduleJS .layerTitleText {
+	float:left;
+	/* font-size: 12pt; */
+	/* font-weight: 100; */
+	/* overflow: auto; */
+}
+.moduleJS .layerTitleLine {
+	display: none;
+}
+.letterTitle {
+	font-weight: 700;
+	font-size: 32px;
+	float: left;
+	padding-right: 10px;
+}
+.catInfo {
+	line-height: 16px;
+	margin-bottom: 10px;
+}
+.layerNote a {
+	color: #339933;
+	text-decoration: underline;
+}
+.heroText { /* not currently used. Created for use with site-dark.css. */
+	clear:both;
+	float:left;
+	line-height: 20px;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.layerNoteInHeader {
+	clear:left;
+	padding-top:10px;
+	padding-left: 10px;
+}
+.mapBarLine {
+	padding-top: 7px;
+	font-color: #000;
+	line-height: 18px; /* Allows for radio button heights */
+}
+.mapBarLine label {
+	padding-left:5px;
+	padding-right:10px;
+}
+.hideWhere i {
+	font-size: 16px;
+}
+#rowsWrench {
+	position: absolute;
+	right: 10px;
+	color: #bbb;
+	margin-top: 12px;
+	/* margin-left: 0px; */
+}
+#rowsWrench i {
+	font-size: 18px;
+}
+#rowsTotal {
+	font-size: 18pt;
+	padding-top: 6px;
+	padding-left: 12px;
+	float: left;
+	white-space: nowrap;
+	font-family: 'Open Sans Condensed';
+}
+.menuItem {
+	clear:both;
+	min-height:28px;
+	padding:0 0 12px -4px;
+	padding-top: 4px;
+}
+.menuItem i {
+	width:32px;
+}
+.menuItem:hover {
+	background-color: #eee;
+}
+.searchElements {
+	float:left;
+	/* min-height: 100px; */
+}
+.closeAlphabetHolder {
+	cursor:pointer;
+	padding: 2px 0px 2px 6px;
+	background: #aaa;
+}
+.closeAlphabet {
+	padding:0 10px 12px 0;
+	font-size:16px !important;
+	color:#fff;
+}
+.searchTextHolder {
+	display: none;
+	/* clear:both; */
+	/* overflow: auto; */
+	/* margin: 7px 14px 4px 0px; */
+	/* padding-left: 20px; */
+	float: left;
+	padding: 12px 12px 12px 0px;
+	/* border-left: 1px solid #ccc; */
+	min-height: 24px;
+	line-height: 18px;
+	width: 100%;
+	/* float:right; */
+	/* float: left; */
+}
+.searchTextMove {
+	/* clear:left; */
+	float: left;
+	width: 100%;
+}
+#searchText {
+	
+	/* float:left; */
+}
+
+.detailsText {
+	line-height: 18px;
+	margin-bottom:10px;
+}
+.detailsBit {
+	margin: 0 0px 14px 0;
+}
+.listTable, .detailsTable {
+	max-height: 650px;
+	/* height: 100%; */
+	/* overflow: hidden; */
+}
+/*
+.listTable td, .detailsTable td {
+	font-size:10pt;
+	vertical-align: top;
+}
+.listTable td {
+	padding: 8px 8px 12px 0;
+}
+*/
+.besideLeftHolder .listScroll { /* Only scroll when beside map */
+	overflow-y: auto;
+}
+.detailsTable {
+	padding-right:12px;
+}
+.detailsTableXXX td {
+	padding: 0 20px 16px 0;
+}
+.detailsTableXXX td:nth-of-type(1) {
+	text-transform:capitalize;
+}
+input {
+	/* Allows padding to be ignored when setting width 100% */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.moduleJS .textInput {
+	font-size:14pt;
+	/* border-radius: 6px; */
+	border: 1px solid #d9d9de;
+	margin-bottom: 8px;
+}
+.moduleJS .whereFilter {
+	font-size:12pt;
+}
+
+@media (min-width: 801px) {
+	.moduleJS .textInput {
+		min-height: 38px;
+	}
+}
+.filterSelected {
+	/* font-weight: bold; */ /* delays display of text */
+	font-size: 16pt;
+	white-space: nowrap;
+}
+
+#hideAdvanced {
+	font-size:20px;
+	cursor:pointer;
+	float:right;
+}
+#findWhat {
+	background-color:rgba(255, 255, 255, 0.8);
+	/* overflow: auto; */
+	position: relative;
+	line-height: 20px;
+	padding-left:4px;
+}
+#findWhat label {
+	color: #555;
+	cursor: pointer;
+}
+#findLocationWith div {
+	white-space: nowrap;
+}
+.topButtons {
+	padding: 0px;
+	float: left;
+	width:100%;
+	/* padding-left: 30px; WARNING - This blows out right side of one.html */
+	/* z-index: 999999999; */ /* For mobile, attempt */
+	position: relative;
+}
+.primaryRows {
+	clear: both;
+	margin: 0px; /* for third-party .row in GUARD custom.min.css */
+	max-height: 700px;
+}
+.listLayoutToggle {
+	padding: 4px;
+	/* padding-left: 10px; */
+	/* color: #fff; */
+}
+.listLayoutToggle i {
+	font-size: 32px;
+	margin-top: -3px;
+	padding-right: 4px;
+}
+.listLayoutToggle:hover {
+	cursor: pointer;
+}
+.listLayoutToggle div {
+	padding-top: 6px;
+}
+
+.moduleJS .horizontalTabs {
+	/* padding: 10px 0 0 15px; */
+	/* overflow: hidden; */
+	height:60px;
+	max-height:60px; /* To hide nav when wrapping to second line. */
+	/* margin-bottom: 30px; */
+	/* clear: both; */
+	margin:0 auto;
+	display: inline-block;
+	/* clear:both; */
+	margin-top: 28px;
+	margin-left: 10px;
+}
+.moduleJS .horizontalTabs .layoutTab {
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	padding: 8px 14px 7px 14px;
+}
+.moduleJS .horizontalTabs .layoutTab a {
+	color: #fff;
+	text-shadow: rgba(33, 33, 33, 1) 1px 1px 1px;
+	text-decoration: none;
+}
+.moduleJS .horizontalTabs a {
+	font-family: 'Open Sans Condensed';
+	font-size: 22px;
+}
+.moduleJS .horizontalTabs .active a {
+	border-bottom: 4px solid #F58220;
+}
+
+.moduleJS .horizontalButtons .layoutTabX {
+	margin:6px 0 0 6px;
+	/* background-color: rgba(44, 44, 44, 0.40); */
+	border: 1px solid #fff;
+	background-color: #aaa;
+}
+.moduleJS .horizontalButtons .layoutTab {
+	padding-topX: 15px;
+	line-height: 24px;
+	min-height: 36px;
+	/* background-color: #999; */
+	margin: 4px 6px 0 0;
+	box-sizing: border-box;
+	border: 0px solid #ccc;
+	color: #555;
+
+	font-family: 'Open Sans Condensed';
+	font-size: 16px;
+}
+
+.moduleJS .horizontalButtons .layoutTab:hover {
+	color: #fff;
+	background-color: #777;
+}
+.moduleJS .horizontalButtons .active {
+	background-color: rgba(22, 22, 22, 0.6);
+	background-color: #fff;
+	color:#333;
+	border: 0px solid #555;
+}
+.material-icons {
+	float:left;
+}
+.mapBarButtonsRight {
+	float:right;
+	z-index: 10;
+}
+.mapBarButtonsInner .showDownloadHolder {
+	position:relative;
+}
+.mapBarButtonsInner .showDownload {
+	margin-right: 0px
+}
+.appIcon {
+	color:rgb(85, 85, 85);
+	color:#ddd;
+	padding: 11px 2px 7px 10px;
+	font-size: 30px !important;
+}
+.hideApps {
+	padding-right:10px;
+}
+.quickMenu {
+	display:none;
+	/* float:left; */
+	position: absolute;
+	z-index: 10;
+	left: 35px;
+	margin: 50px 20px 20px 20px;
+	font-size:18px;
+	line-height: 32px;
+	color:#fff;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+.quickMenuHolder {
+	position: fixed;
+}
+.quickMenu div {
+	cursor: pointer;
+}
+@media (max-width:1200px) {
+	.quickMenu {
+		margin: 0px;
+		left: 20px;
+	}
+}
+@media (max-width:1100px) {
+	.horizontalLogo {
+		display: block;
+	}
+	.quickMenuHolder {
+		display:none;
+	}
+}
+
+.textButton {
+	font-size: 10pt;
+	padding: 7px 6px 0px 6px;
+	border-radius: 4px;
+	min-height: 32px;
+	height: 32px;
+	background-color: #fff;
+	color: #777;
+	border: 1px solid #ccc;
+	text-decoration: none !important;
+}
+.textButton:hover {
+	color:#fff;
+	background: #777;
+}
+.moduleJS .topButton {
+    font-size: 10pt;
+    padding: 10px 10px 6px 10px; /* padding-bottom for button in account popup */
+    padding: 11px 10px 0px 10px;
+    min-height: 38px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 4px;
+    /* background-color: #fff; */
+    color: #777;
+    color: #fff;
+    margin: 0 0 4px 6px;
+    float: left;
+    text-decoration: none;
+}
+.moduleJS .topButtons .threeDotNavClick {
+	padding-top: 8px;
+}
+.moduleJS .topButtons .threeDotNavClick i {
+}
+.moduleJS .topButton:hover i {
+	color: #777;
+}
+.moduleJS .topButton .iconText {
+	padding: 4px 0 0 6px;
+}
+.moduleJS .listHeader i {
+	font-size: 32px;
+}
+.moduleJS .accountPanelClose {
+	float:right;
+}
+.moduleJS .hideDetailsClose, .moduleJS .accountPanelClose {
+	font-size: 22px !important;
+	padding-top: 4px;
+}
+.moduleJS .listHeader .topButton {
+    /* Adjust for mystery padding */
+    padding-top: 6px;
+}
+
+
+.moduleJS .topButton i, .moduleJS .topButton div {
+	color: #999;
+	/* padding-top: 4px; */
+}
+.moduleJS .topButton:hover {
+	color: #fff;
+	background-color: #999;
+}
+.moduleJS .topButton:hover i {
+	color: #fff;
+}
+.moduleJS .topButton:hover div {
+	color: #fff !important;
+}
+.moduleJS .showSettingsInNavTop {
+	float:left;
+}
+.moduleJS .showSettingsInNavTop .topButton {
+	margin:0px;
+}
+.moduleJS .topButton {
+	line-height: 16px;
+	font-size: 15.5px;
+	text-transform: uppercase;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.moduleJS .topButton a {
+	color:#fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 15.5px;
+}
+.moduleJS .blueButton {
+    color: #fff;
+    background-color: #4586f6;
+}
+.moduleJS .greenButton {
+    color: #fff;
+    background-color: #42A842;
+}
+.moduleJS .orangeButton {
+    color: #fff;
+    background-color: orange;
+}
+
+.layoutTabHolder {
+	clear:left;
+	margin-bottom: 3px;
+	width: 100%;
+}
+.layoutTab {
+	display: block;
+	float: left;
+	cursor: pointer;
+	font-size: 11pt;
+	color: #fff;
+	max-height: 32px !important;
+
+	/* padding bottom 0px for embedded aerospace. */
+	/* padding-top: 10px is to big for Khai's bootstrap site.  */
+	padding: 7px 16px 6px 16px;
+	font-size: 10pt;
+	border-radius: 4px;
+	/* color: #777; */
+}
+
+.layoutTabX { /* Underlined version */
+	display: block;
+	float: left;
+	cursor: pointer;
+	font-size: 18px;
+	font-family: 'Open Sans Condensed';
+}
+.layoutTab:hover{
+	color:#fff;
+	background-color:rgba(0, 0, 0, 0.2);
+}
+.topButtons .layoutTab {
+	/* margin: 0 4px 0 0; */
+}
+.layoutTabText {
+	display: none;
+}
+.layoutTabIcon {
+	displayX: none !important;
+	padding-top: 0px;
+	margin-top: -4px;
+	color: #bbb;
+}
+.layoutTabText {
+	displayX: none; /* Exuma */
+	padding: 3px 3px 8px 2px;
+	float:left;
+	color: #333 !important;
+}
+.layoutTabText:hover {
+	color: #777;
+}
+.layoutTabSmWithText {
+	padding: 10px 6px 0px 6px;
+}
+.layoutTabSm .material-icons {
+	color: #aaa;
+}
+.layoutTabMobile {
+	background: #333 !important;
+	border: solid 1px #333 !important;
+}
+
+.moduleJS .toggleListFormats {
+	padding-top: 7px;
+}
+.moduleJS .listFormats {
+	left:auto;
+	right:0;
+	top:38px;
+	padding:8px;
+}
+.moduleJS .listOptions {
+	/* float:right; */
+	display:none;
+	/* white-space:nowrap; */
+	position:absolute;
+	left:auto;
+	right: 0;
+	top: 44px;
+	width: 150px;
+	/* z-index: 999999999; */
+	/* background-color: #333; */
+	/* border:1px solid #333; */
+}
+
+.filterTab {
+	/* border-bottom: 0px; */
+}
+.fieldSelector {
+	display:none;
+	/* position: absolute; */
+	margin-top: -31px;
+}
+.filterHideBasic {
+	display:none;
+}
+
+.settingsButton {
+	display: block;
+	float: left;
+	cursor: pointer;
+	font-size: 11pt;
+	color: #222;
+	border-radius: 5px;
+	padding: 4px 8px 3px 8px;
+	padding: 12px 16px 13px 16px;
+	margin: 0;
+	background-color:#ccc;
+	/* min-height: 36px; */
+	min-width: 240px;
+	text-align: center;
+}
+.settingsButton:hover{
+	color:#000;
+	background-color:rgba(dd, dd, dd, 1);
+}
+
+.layerCheckboxes label {
+	margin-left: 8px;
+	/* text-transform: capitalize; */
+	font-size: 17px;
+	line-height: 18px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	cursor: pointer;
+}
+
+/* To Do: Need to apply this when embed div is narrow. */
+@media (max-width:600px) {
+	.moduleJS .layerSideNav {
+		width:100%;
+	}
+	.moduleJS .row {
+		display: block;
+		width: 100%;
+	}
+	.moduleJS .layerCheckboxes .column {
+		width:50% !important;
+	}
+	.moduleJS .tabSections {
+		width: 100%;
+	}
+	.moduleJS #layerBox {
+		width: 100%;
+	}
+	.moduleJS .appMenuInner {
+		padding-bottom: 80px; /* Adds space between menu and layer below it. */
+	}
+}
+@media (max-width: 300px) {
+	.moduleJS .layerCheckboxes .column {
+		width:100% !important;
+	}
+}
+.layerSelector {
+	/* height: 30px; */
+	margin-bottom: 4px;
+	border: 1px solid #ddd;
+	/* width: 100%; */
+	float: right;
+}
+.layerPanel .layerSection {
+	border-bottom: 1px solid #555;
+}
+.layerSectionTitleFormat {
+	padding: 13px 4px 8px 18px;
+	color: #fff;
+	font-size: 12pt;
+	font-family: 'Open Sans Condensed', sans-serif;
+	/* background-color: rgba(22, 22, 22, 0.1); */
+	min-height: 34px;
+	/* border-top: 1px solid #444; */
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.layerSectionTitle i {
+	padding: 0px 5px 0px 0px;
+	font-size: 20pt;
+	color: #ccc;
+}
+.showAllResults {
+	margin-left: 10px;
+	float: right;
+}
+.showAllLayers:hover {
+	background-color: #333;
+	background-color: rgba(22, 22, 22	, 0.6);
+}
+.hideLayersClick {
+	float:right;
+	padding:13px;
+	/* padding-right: 0px; */
+	/* margin-right: -24px; */
+	/* min-width: 80px; */
+	cursor: pointer !important;
+}
+.hideLayersClick i {
+	font-size: 18px;
+	padding: 4px;
+	padding-right: 0px;
+	/* margin-top:-20px; */
+	color:#777;
+	text-shadow: 1px 1px 2px rgba(33, 33, 33, .5);
+}
+.hideSearch {
+	/* text-shadow: 1px 1px 2px rgba(33, 33, 33, .5); */
+}
+.hideLayersClick i:hover {
+	color:#555 !important;
+}
+#alphabet {
+	/* position: absolute; */
+	/* right: 15px; */
+	padding-top: 4px;
+	overflow: hidden;
+}
+#alphabet div:hover {
+	color:#000;
+	cursor: pointer;
+	background: #ccc;
+}
+#alphabet .active {
+	background: #333;
+	color: #fff;
+}
+.fullScreenXXX {
+	position: static;
+    width: 100vw;
+    right: calc(-50vw + 50%);
+}
+
+#gridPanel {
+	overflow: hidden; /* Allows right detail icons to float over rows. */
+	position: relative;
+	background: #fff;
+}
+.gridPanelBar {
+	overflow:auto;
+	background: #ccc;
+}
+#cartodb_table { 
+  color: #333;
+  background-color: #fafafa;
+  /* font-family: Helvetica, Arial, sans-serif; */
+  font-size: 10px;
+  width: 100%;
+  /* Table reset stuff */
+  border-collapse: collapse; border-spacing: 0; 
+}
+#cartodb_table thead {
+	border-bottom: 1px solid #ccc; /* To line up with right dots which are margin-top: -1 */
+}
+#cartodb_table td, #cartodb_table th {
+	border: 0 none;
+	min-height: 30px;
+}
+      
+#cartodb_table th {
+  /* Gradient Background */
+  /*
+  background: linear-gradient(#777 0%, #aaa 100%);
+  */
+  background: #777;
+  border-right: 1px solid #ddd;
+  color: #FFF;
+  font-weight: bold;
+  /* height: 36px; */
+  padding: 8px;
+  padding-top: 14px;
+}
+#cartodb_table tr {
+	min-height: 60px;
+}
+#cartodb_table td {
+	/* background: #fafafa; */
+	padding: 8px;
+	font-size: 8pt;
+	vertical-align: top;
+	/* min-height: 50px; */
+	border-bottom: 1px solid #ccc;
+}
+#cartodb_table tr:hover {
+	background: #fff;
+}
+/*
+#cartodb_table tr:nth-child(even) {background: #fcc !important; border-bottom: 3px solid #000 !important}
+#cartodb_table tr:nth-child(odd) {background: #cfc !important}
+*/
+
+#cartodb_table tr td:nth-child(odd){ 
+	background: #b8d1f3;
+	background: #f8f8f8;
+}
+#cartodb_table tr td {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+.detailsLink {
+	padding-right:22px;
+}
+.rowCountTD {
+	padding: 0px !important;
+	margin: 0px !important;
+	min-width: 28px;
+}
+.rowDetailsTD {
+	padding: 0px !important;
+	margin: 0px !important;
+	min-width: 30px; /* Allows arrow to avoid covering last cell when scrolled to far right. */
+	/* position: relative; */ /* Causes arrow to align right out of view, but fixes top align. */
+}
+.rowDetailsCount {
+	float:left;
+	line-height: 24px;
+	text-align:center;
+	background-color:rgba(33, 33, 33, 0.7);
+	border-radius: 50%;
+	min-width: 24px;
+	min-height: 24px;
+	color:#fff;
+	margin-right: 10px;
+	font-size: 10px;
+}
+.gridRow {
+	/* min-height had no effect */
+	height:45px;
+}
+.gridRow:hover {
+	cursor: pointer;
+}
+.gridScroll, .gridScrollLeft {
+	position:absolute;
+	right:-1px;
+	top:0;
+	padding-top: 7px;
+	background-color:#777;
+	/* border-left: 1px solid #ccc; */
+	height:100%;
+	min-height:36px;
+	max-height:36px;
+	min-width:20px;
+	cursorX: pointer;
+}
+.rowCountHeader {
+	position:absolute;
+	left:0;
+	top:0;
+	background:#777;
+	min-width:28px;
+	height:32px;
+	z-index: 1;
+}
+.rowCount {
+	position:absolute;
+	background:#eee;
+	padding:3px 0 0 3px;
+	height: 44px;
+	/* top: 0; */
+	/* bottom: 0; */
+	min-width:28px;
+}
+.rowDetailsTitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-family: 'Open Sans Condensed';
+}
+#listingImage {
+	/* margin:0 25px 0 30px; */
+}
+.rowDetailsButton {
+	position:absolute;
+	margin-top:-1px;
+	border-top:1px solid #ccc;
+	right:0;
+	vertical-align: top;
+	background-color: #fafafa;
+	height:100%;
+	min-height:40px;
+	max-height: 45px;
+	width:30px;
+	padding: 4px 10px 0 8px;
+	vertical-align: center;
+	z-index: 1;
+	cursor: pointer;
+}
+.rowDetailsArrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 0 12px 14px;
+	border-color: transparent transparent transparent #ddd;
+}
+.rowDetailsArrow:hover {
+	border-color: transparent transparent transparent #007bff;
+}
+.rowDetailsArrow.active {
+	border-color: transparent transparent transparent #555;
+}
+.rowDetailsArrowLeft {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 12px 14px 12px 0;
+	border-color: transparent transparent transparent #ddd;
+}
+.rowDetailsLink {
+	/* padding-top: 5px; */
+	cursor: pointer;
+	font-size: 13px;
+	line-height: 14pt;
+	padding: 10px 8px 5px 0;
+	border-bottom: 1px solid #ccc;
+	clear: both;
+	float: left;
+	width: 100%;
+}
+.dButton {
+	background-color: #ddd;
+	color: #333;
+	border-right:2px solid #fff;
+	display: block;
+	margin-bottom: 4px;
+	width:50%;
+	float:left;
+	max-width: 500px;
+	cursor: pointer;
+	padding: 8px 8px 8px 16px;
+	font-size: 14px;
+}
+.dButton:hover {
+	background-color: #bbb;
+	color: #fff;
+}
+.categoryKey {
+	font-size: 16px;
+	font-weight: 500;
+	/* margin-bottom: 4px; */
+	font-size: 11.5px;
+	color: #aaa;
+	text-transform: uppercase;
+}
+.categoryValue {
+	margin-bottom: 10px;
+}
+.rowMore {
+	display:inline;
+	color:blue;
+}
+.rowMoreText {
+	display:none;
+}
+
+.sideicon {
+	cursor: pointer;
+    font-size: 32px !important;
+    color: #d6d6d6;
+    color: #aaa;
+    /*
+    -webkit-filter: drop-shadow( 1px 1px 3px #333 );
+    filter: drop-shadow( 1px 1px 3px #333 );
+    */
+}
+
+.positionIcon {
+	background-color: #fff;
+	box-shadow: 0 1px 5px rgba(0,0,0,.65);
+    border-radius: 4px;
+    padding: 3px;
+}
+.positionIcon:hover {
+    background-color: #eee;
+    color: #000;
+}
+.positionIcon i {
+	font-size: 24px;
+	color: #777;
+}
+
+/* Resides in both menu.css and site.css */
+.navTopRight .menuTopIcon {
+	float: left;
+	cursor: pointer;
+	font-weight: 100;
+}
+.navTopRight .menuTopIcon:hover {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+	color: #bbb;
+}
+
+.threeDotNavClickInnner {
+
+}
+.threeDotNavClickInnner i {
+	font-size: 32px !important;
+	padding: 0px;
+}
+
+.fixedTopBar .rightTopIcons {
+	/* not yet used
+	float:right;
+	position: absolute;
+	right: 0;
+	z-index: 10;
+	*/
+	position: absolute;
+	right: 0;
+	/* z-index: 500; */
+}
+/* , .fixedTopBar .threeDotNavClickFixedTopBar */
+#headerHolder .threeDotNavClickFixedTopBar, .fixedTopBar .threeDotNavClickFixedTopBar {
+	color:#fff;
+	padding:8px;
+	padding-top: 3px;
+	margin-right: -2px;
+	float:right;
+	cursor: pointer;
+	pointer-events: auto; /* Catch click through */
+	position: absolute; /* Otherwise covered by #headerImageScreen */
+	right: 0;
+	z-index: 10;
+}
+.coversYouTubeInfoIcon {
+	background-color: #000; /* covers youtube i icon */
+}
+#headerHolder .threeDotNavClickFixedTopBar i, .fixedTopBar .threeDotNavClickFixedTopBar i {
+	font-size: 32px !important;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.topButtons .threeDotNav {
+	/* padding-top:6px !important; */
+}
+
+.menuTopIconHot {
+	color: #fff;
+}
+.menuTopIconHot:hover {
+	color: #eee;
+}
+.menuTopIconCustom {
+	text-shadow: 2px 2px 2px rgba(255, 255, 255, .5);
+}
+.menuTopIconClose {
+	padding:16px 10px 10px 10px;
+}
+.menuTopIconClose:hover {
+	color: #777;
+}
+.navTopFontCustom {
+	color:#555 !important;
+}
+.videoHeightHolder {
+	width:0px;
+	float:left;
+	min-height: 270px;
+}
+#heroContent {
+	border-bottom: #ccc;
+	position: relative;
+	/* float: left; */ /* Required for div to wrap around content - for updateOffsets() calculation. */
+}
+.leftPadding {
+	padding-left: 14px !important;
+	padding-top: 10px;
+}
+#siteHeaderX {
+	position: absolute;
+	left:0;
+	right:0;
+	z-index: 200;
+	pointer-events: none;
+}
+
+.rightIconsLarge i {
+	font-size: 28px;
+}
+.rightIconsLarge #expandPanel {
+	/* font-size: 42px !important; */
+}
+.rightIconsLarge fa-film {
+	font-size: 28px !important;
+}
+/*** Allow clicks to reach video and slideshows  ***/
+/* , .moduleJS, html, body */
+.moduleJS .currentloncurrentlon {
+	pointer-events: none;
+}
+/* #siteHeader, */
+.catchClick, #headerHolder, #navTopBar, #globalMenu, #sectionNavigation, .layoutTabHolder, #filterPanelHolder, .settingsPanel, .accountPanel  {
+	pointer-events: auto; /* Catch click */
+}
+
+/******** Responsive Video **************/
+
+.flex-video {
+  position: relative;
+  padding-top: 25px;
+  padding-top: 5px;
+  padding-bottom: 67.5%;
+  height: 0;
+  overflow: hidden;
+}
+/* .flex-video.widescreen { padding-bottom: 57.25%; } */
+.flex-video.widescreen { padding-bottom: 56%; }
+.flex-video.vimeo { padding-top: 0; }
+
+.flex-video iframe,
+.flex-video object,
+.flex-video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 800px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
+  .flex-video { padding-top: 0; }
+}
+
+/********* White background, Overridden by site-dark.css ******/
+
+#navTopBar {
+	display: none; /* Hidden within widget */
+	z-index: 99999;
+	/* background-color: rgba(33, 33, 33, 0.8); */
+}
+.navTopFont {
+	float: left;
+	padding: 0px 10px 0px 0px;
+	font-size: 16pt;
+	/* cursor: pointer; */
+	font-family: 'Open Sans', 'Helvetica Neue', HelveticaNeue, calibri, arial, sans-serif;
+	/* font-weight: 800; */
+	font-family: 'Open Sans Condensed';
+	/* font-family: 'Futura Today DemiBold'; */
+	/* padding-top:16px; */
+	font-size: 24px;
+	/* border-right: 1px solid #ccc; */
+	margin-right:18px; /* For widget-local.html */
+}
+.navTopTitle {
+	display: none;
+	/* overflow: visible; */
+	float: left;
+	padding-top: 12px;
+}
+.navTopTitleText {
+	display: none; /* Also forwardArrowInBar */
+	float:left;
+	padding-left: 4px;
+	padding-right: 8px;
+}
+.navTopTitleText:hover {
+	color:#fff;
+}
+.navTopTitleMenu {
+	color:#fff;
+	background:#333;
+	position: absolute;
+	top:48px;
+	width:200px;
+	height:50px;
+	z-index: 999999;
+}
+.navTopRight {
+	float: right;
+	/* position: absolute; */
+	/* right: 0; */
+	/* padding: 0 10px 0 8px; */
+}
+.navTopRight .showFilters i {
+	colorX: #aaa;
+}
+.navTopRight .showVideo i, #upperRightIcons .showVideo i {
+	/* padding: 6px 4px 10px 2px; */
+	font-size:24px;
+}
+.navTopRight .showAccountTools i {
+	margin-top: -2px;
+	margin-left: -2px;
+	font-size: 30px;
+}
+.horizontalMenu {
+	max-height: 60px;
+	overflow: hidden;
+}
+.searchModuleIcon {
+	/*
+	position: absolute;
+	right:0;
+	*/
+	float:right;
+}
+.searchModuleIcon i {
+	font-size: 42px;
+	padding: 20px;
+	color: #eee;
+	text-shadow: 1.5px 1.5px 1.5px rgba(0, 0, 0, 1);
+}
+.searchModuleIcon i:hover {
+	color: #fff;
+}
+.searchModuleIconLinks {
+	display: none;
+	float: right;
+	color: #fff;
+	padding: 20px 30px 20px 20px;
+	line-height: 20px;
+}
+.appStatusStyle {
+	color: #fff;
+	background-color: rgb(0, 121, 193);
+	background-color: #111;
+	float: left;
+	padding: 6px;
+	/* margin-top: 5px; */
+	font-size: 14px;
+}
+@media (max-width:800px) {
+	.appStatusStyle {
+		float:right;
+	}
+	.showCurrentSection, .showCurrentSectionLg {
+		float: none;
+		overflow: auto; /* So BETA is right aligned */
+	}
+	.navTop, .navTopLeft, .navTopLeftWidth {
+		width: 100% !important; /* So BETA is right aligned */
+	}
+}
+.appStatusBeta {
+	display: block;
+}
+.appStatusBeta .appStatusText:before {
+  content: "BETA";
+}
+
+.littleTab {
+	float:left;
+	cursor: pointer;
+}
+.littleTab i {
+	/* color: #ddd; */
+	color: #fff;
+	font-size: 38px;
+	text-shadow: rgba(33, 33, 33, 0.498039) 1px 1px 2px;
+}
+.littleTab {
+	float:none;
+}
+.navTopRight .topButton i { /* For settings icon */
+	text-shadow: rgba(33, 33, 33, 0.498039) 1px 1px 2px;
+}
+.littleTabActive {
+	/* background-color: #000; */
+	/* width:45px; */
+	float:left;
+}
+.littleTabActive i {
+	color: #fff !important;
+}
+
+.navTopBarIconsX {
+	padding-right: 6px;
+	float: none;
+	position: absolute;
+	right:0;
+	/* min-width: 80px; */
+	/* overflow: auto; */
+	/* white-space: normal; */
+	z-index: 1;
+}
+.filterPanelWidget {
+	/* float:left; */
+}
+#filterPanelHolder {
+	position: static;
+	position: relative;
+	/* padding-bottom: 20px; */
+}
+#hideSearch {
+	displayX: none;
+}
+#showSearch {
+	displayX: none;
+	color: #ccc;
+}
+.showListButton {
+	display: none;
+}
+.nav>li>a {
+	color:#ddd;
+}
+
+.countyText {
+	display: none;
+	background-color: #000;
+	color: #ddd;
+	padding:10px 10px 10px 30px;
+	/* min-height: 42px; */
+}
+.countyListHolder {
+    /* temp override of Development counties.css */
+    /* height:420px !important; */
+    /*
+    position: absolute !important;
+    z-index: 99999 !important;
+    */
+    /* margin-top: 50px !important; */
+    /* left: 10px !important; */
+    /* width: 290px !important; */
+    background-color: rgba(250, 250, 250, 0.9);
+    width: 100%;
+    pointer-events: none !important;
+}
+.leaflet-bottom { /* Temp, hide tier legend */
+    display: none !important;
+}
+.countyList {
+	pointer-events: auto; /* Catch click */
+}
+.hideCounties {
+    pointer-events: auto; /* Catch click */
+    background: #333;
+}
+.info:hover {
+    pointer-events: auto; /* Try to prevent rollover from reaching background. */
+}
+
+.backTriangle {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 8px 13.9px 8px 0;
+	border-color: transparent #ccc transparent transparent;
+	line-height: 0px;
+	_border-color: #000000 #ccc #000000 #000000;
+	_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+	margin:6px 5px 0 -8px;
+}
+.floatBox {
+	margin-top:15px;
+}
+.floatBoxInner {
+	position: relative;
+	float:left;
+	background:#333;
+	color:#fff;
+	padding:20px;
+	line-height: 22px;
+	background-color:rgba(5, 5, 5, 0.8);
+}
+.floatBoxInner:after {
+	bottom: 100%;
+	right: 6px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: rgba(5, 5, 5, 0.8);
+	border-width: 14px;
+	margin-left: -14px;
+}
+
+/* Upper left arrow */
+div.cartodb-tooltip {
+	margin-top:-10px;
+	max-width: 250px !important;
+}
+div.cartodb-tooltip-content-wrapper {
+  position: relative;
+  margin-left: 20px;
+}
+div.cartodb-tooltip-content-wrapper:before {
+	position: absolute;
+	content: '';
+	top: 0px;
+	left: -20px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	opacity: .9;
+	border-width: 0 20px 20px 0;
+	border-color: transparent #fff transparent transparent;
+}
+div.cartodb-tooltip-content-wrapper {
+	cursor: pointer !important;
+
+}
+
+/* Default icon URLs - No appearent effect */
+/*
+.leaflet-default-icon-path {
+    background-image: url(/site/js/themes/css/images/marker-icon-2x.png);
+}
+.leaflet-default-shadow-path {
+    background-image: url(/site/js/themes/css/images/marker-shadow.png);
+}
+*/
+
+/*
+Fix broken marker that occurs in windows.
+These links will need to omit /site
+Indirectly related:
+https://github.com/Leaflet/Leaflet/issues/4968
+https://github.com/PaulLeCam/react-leaflet/issues/255#issuecomment-261904061
+*/
+/*
+.leaflet-marker-shadow {
+	background: url(/site/js/themes/css/images/marker-shadow.png) left top no-repeat !important;
+}
+.leaflet-marker-icon {
+	background: url(/site/js/themes/css/images/marker-icon-2x.png) left top no-repeat !important;
+}
+*/
+
+/* InSite Look */
+.sectionTab {
+    float: left;
+    white-space: nowrap;
+	background-color: #4EAA4C;
+	padding: 14px 6px 17px 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	margin-right: 3px;
+	height:100px;
+	cursor: pointer;
+}
+.sectionTab a {
+	color: #fff;
+	font-size: 13px;
+	font-family: 'Open Sans', 'Helvetica Neue', HelveticaNeue, calibri, arial, sans-serif;
+}
+.sectionTab a:hover {
+	color: #fff;
+}
+
+.moduleJS .horizontalSectionMenu {
+	clear: both;
+}
+
+.moduleJS .besideLeftHolder {
+	display: none;
+	background: #fff;
+}
+.moduleJS .overlaysInSide {
+	background-color: #fff;
+	color: #333;
+}
+.moduleJS .overlaysInSide .layerSectionTitleFormat {
+	color: #333;
+}
+.moduleJS .overlaysInSide .layerSectionTitleFormat:hover {
+	color: #333;
+}
+.moduleJS .overlaysInSide .layerCbRow {
+	color: #333;
+}
+.moduleJS .overlaysInSide .layerCbRow:hover {
+	background-color: #eee;
+	color: #000;
+}
+.moduleJS .overlaysInSide .layerSection {
+	border-bottom: 1px solid #ccc;
+}
+
+.moduleJS .navTopLeft .horizontalSectionMenu .sectionLink {
+    display: block;
+    float: left;
+    cursor: pointer;
+    font-size: 18px;
+    /* padding: 4px 8px 9px 8px; */
+    padding-right: 12px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    margin: 4px 4px 4px 0px;
+    /* font-family: 'Open Sans'; */
+    font-size: 16px;
+}
+.moduleJS .navTopLeft .horizontalSectionMenu .sectionLink a {
+	color: #fff;
+}
+.moduleJS .navTopLeft .horizontalSectionMenu .active a {
+	border-bottom: 4px solid #4586F6; /* blue */
+}
+
+/* Not currently in use */
+.moduleJS .topButtons .horizontalSectionMenu .sectionLink {
+    padding: 8px 14px 7px 14px;
+}
+.moduleJS .topButtons .horizontalSectionMenu .sectionLink {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding-bottom: 7px;
+}
+.moduleJS .topButtons .horizontalSectionMenu .sectionLink {
+    display: block;
+    float: left;
+    cursor: pointer;
+
+    /*
+    font-size: 24px;
+    font-family: 'Open Sans Condensed';
+    font-familyX: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    max-height: 32px !important;
+    text-shadow: rgba(33, 33, 33, 1) 1px 1px 1px;
+    */
+    padding: 12px 16px 9px 16px;
+    border-radius: 4px;
+    margin: 4px 4px 4px 0px;
+    background-color: #777;
+}
+.moduleJS .topButtons .horizontalSectionMenu .sectionLink:hover {
+	background-color: #999;
+}
+.moduleJS .topButtons .horizontalSectionMenu .sectionLink:hover a{
+	color: #fff;
+}
+.moduleJS .topButtons .horizontalSectionMenu .sectionLink a {
+	color: #fff;
+	pointer-events: none; /* Prevent loop clicking on surrounding */
+}
+.moduleJS .topButtons .horizontalSectionMenu .active {
+	background-color: #fff;
+}
+.moduleJS .topButtons .horizontalSectionMenu .active a {
+	color: #555;
+}
+
+
+.video-mContainer { display: block; width: 100%; }
+
+/*  > div */
+.video-player-holder {
+    width: 100%; /* assuming that the video has a 16:9 ratio */
+    height: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer; 
+    background-color: #333;
+    box-sizing: content-box;
+}
+img.video-thumb { bottom: 0; display: block; left: 0; margin: auto; max-width: 100%; width: 100%; position: absolute; right: 0; top: 0; height: auto }
+div.play-button { height: 48px; width: 68px; left: 50%; top: 50%; margin-left: -34px; margin-top: -24px; position: absolute; background: url("/site/img/icons/play-black-68.png") no-repeat; }
+div.play-button-hover { height: 48px; width: 68px; left: 50%; top: 50%; margin-left: -34px; margin-top: -24px; position: absolute; background: url("/site/img/icons/play-red-68.png") no-repeat; display:none; }
+#video-iframe { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+
+.textDropShadow {
+	color: #fff;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+.filterLabel {
+	/* color: #fff; */
+	/* text-shadow: 2px 2px 2px rgba(0, 0, 0, 1); */
+}
+
+/* Speech Recognition */
+.si-wrapper {
+	position: relative;
+}
+.si-btn {
+	display: block !important;
+}
+.si-wrapper input {
+	margin: 0;
+}
+.si-wrapper button {
+	position: absolute;
+	top: 0 !important;
+	right: 0;
+	height: 18px;
+	width: 18px;
+	margin: 0;
+	border: 0;
+	padding: 10px;
+	padding-right: 26px;
+	background: none;
+	font: 0/0 a;
+}
+.si-mic,
+.si-mic:after,
+.si-holder,
+.si-holder:before,
+.si-holder:after {
+	position: absolute;
+	background: #333;
+}
+/*
+.cartodb-legend:before {
+	content: 'DoD-Related Awards (millions)';
+	display: block;
+}
+.cartodb-legend li:nth-child(odd):before {
+	content: '$';
+	margin-right:-2px;
+}
+*/
+
+/* For green bar mb-header */
+
+.moduleJS .bar-headerX {
+    display: none;
+    position: relative;
+    /* z-index: 10; */
+    height: 13px;
+    width: 100%;
+    background-color: #4eaa4a;
+    border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    border: 0;
+    behavior: url(../../images/PIE.htc);
+}
+.moduleJS .navTop {
+    background-color: transparent;
+    /* overflow: auto; */
+    position: relative;
+    min-height: 100px;
+}
+.moduleJS .topButtons {
+    /* background: linear-gradient(to right, rgba(114, 114, 114, 0.3) 0%, rgba(225, 225, 225, 0.3) 100%); */
+    /* background-color: rgba(255, 255, 255, .5); */
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#727272+0,ffffff+100&0.8+0,0.8+100 */
+    background: -moz-linear-gradient(left, rgba(114,114,114,0.3) 0%, rgba(225,225,225,0.3) 100%); /* FF3.6-15 */
+    /* background: -webkit-linear-gradient(left, rgba(114,114,114,0.3) 0%,rgba(225,225,225,0.3) 100%); */ /* Chrome10-25,Safari5.1-6 */
+    /* background: linear-gradient(to right, rgba(114,114,114,0.3) 0%,rgba(225,225,225,0.3) 100%); */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc727272', endColorstr='#ccffffff',GradientType=1 ); /* IE6-9 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+@media (min-width: 801px) {
+	.moduleJS .topButtons {
+		border-bottom: 1px solid #dadada;
+	}
+}
+.moduleJS .smartHolder {
+	/* background-color: rgba(33, 33, 33, 0.5); */
+}
+.moduleJS .filterWrapper {
+    /* background-color: transparent !important; */ /* temp. overrides site-dark.css */
+    /* background-color: rgba(33, 33, 33, 0.3) !important; */ /* same as #mapBar */
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.primaryHeader {
+	text-align: center;
+	/* float: left; */
+}
+.primaryTitle {
+	margin: 0 auto;
+	padding-top: 80px;
+	padding-bottom: 20px;
+	padding-right: 40px; /* for centering */
+	color: #fff;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.primaryStats {
+	clear:both;
+	font-size: 28px;
+	color: #fff;
+	padding-top:60px;
+	text-align: center;
+	display: inline-block;
+	margin:0 auto;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+}
+.primaryStats > div {
+	width:200px;
+	float:left;
+}
+@media (max-width: 900px) {
+	.primaryStats {
+		display:none;
+	}
+}
+
+.primaryStatsTitle {
+	font-size: 13px;
+	line-height: 20px;
+	text-transform: uppercase;
+}
+.filterPanelInPrimaryHeader {
+	text-align: center;
+	width:100%;
+	float:left;
+}
+.filterPanelInPrimaryHeader .fieldsLeft {
+	/*
+	margin: 0 auto;
+	widthX: 800px;
+	float:left !important;
+	*/
+	display: inline-block;
+	text-align: left;
+}
+.moduleJS .bigThumbUl {
+	margin-left: 30px;
+	/*
+	padding-right: -30px;
+	border:1px solid #fff;
+	*/
+}
+
+.moduleJS .widthPercent { /* allows margin to reside within percent */
+	width:100%;
+	float:left;
+	padding-right:30px;
+}
+.moduleJS .bigThumb {
+	width:100%;
+	position:relative;
+	float:left;
+	min-height: 200px;
+	overflow: hidden;
+	border:1px solid #fff;
+	background-size: cover;
+	margin:0 30px 30px 0;
+}
+.moduleJS .bigThumb a {
+	position: absolute;
+	top:0; right:0; left:0; bottom:0;
+	text-align: center; /* no effect */
+	cursor: pointer;
+}
+.moduleJS .bigThumbText {
+	text-align: center;
+	overflow: visible;
+	position: absolute;
+	top:30%;
+	color:#fff;
+	font-size:20px;
+	margin:25px;
+	background-color: rgba(33, 33, 33, 0.5);
+	padding:2px 8px 3px 8px;
+}
+.moduleJS .bigThumb:hover .bigThumbText{
+	background-color: #333;
+}
+.moduleJS .bigThumbMenu {
+	clear:both; /* clear close X */
+	margin:0 auto;
+}
+
+@media (min-width: 300px) {
+	.primaryTitle {
+		font-size: 40px;
+	}
+}
+@media (min-width: 501px) {
+	.moduleJS .bigThumb {
+		min-height: 300px;
+	}
+}
+@media (min-width: 801px) {
+	.primaryTitle {
+		font-size: 50px;
+	}
+	.moduleJS .widthPercent {
+		width:50%;
+	}
+	.moduleJS .bigThumb {
+		min-height: 200px;
+	}
+	.moduleJS .bigThumb {
+		/* max-width:350px; */
+		min-height: 240px;
+		max-height: 240px;
+	}
+	/*
+	.moduleJS .widthColumns li:nth-child(2n) {  
+	  padding-right:0px;
+	}
+	.moduleJS .widthColumns li:nth-child(3n) {  
+	  padding-right:30px;
+	}
+	*/
+}
+@media (min-width: 1000px) {
+	.primaryTitle {
+		font-size: 58px;
+	}
+	.moduleJS .widthPercent {
+		width:33%;
+	}
+	.moduleJS .bigThumb {
+		min-height: 200px;
+	}
+	/*
+	.moduleJS .widthColumns li:nth-child(2n) {  
+	  padding-right:30px;
+	}
+	.moduleJS .widthColumns li:nth-child(3n) {  
+	  padding-right:0px;
+	}
+	*/
+	.moduleJS .widthColumns{
+		max-width:1200px;
+	}
+}
+
+#countyMap {
+	margin:20px 0 0 20px;
+	width:240px !important;
+	height:250px !important;
+	min-height:270px !important;
+	float:left;
+}
+.googDocEmbed #contacts p, 
+.googDocEmbed #contacts p.lead{
+  margin: 0;
+}
+.googDocEmbed {	
+	display:none; 
+	margin: 0 auto;
+	padding: 30px 16px 16px 24px;
+	max-width:1200px;
+}
+.googDocEmbed td {
+  padding-right: 20px;
+}
+.googDocEmbed h4 {
+  font-size: 11pt;
+}
+.googDocEmbed li {
+  margin-top: 10px;
+}
+#tableauViz {
+	position: relative; /* For absolute loading.gif icon */
+}
+.tableauVizHolder > div {
+	width:100%;
+	height:100%;
+	min-height:800px;
+	displayX:none;

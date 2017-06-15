@@ -1,0 +1,56 @@
+callback(
+{
+  "items": [
+  	{
+		"item": "main",
+		"primarytitle": "Datavue Starter",
+		"title": "",
+		"section": "",
+		"provider": "",
+		"youTubeIDX": "z6hQqgvGI4Y",
+		"icon": "<i class='material-icons'>&#xE88A;</i>",
+		"image": "img/hero/main.jpg",
+		"showlist": "0",
+		"showmenu": "1",
+		"mapwidth": "200px"
+	},
+
+		{
+		"item": "contractor-directory",
+		"title": "Contractor Directory",
+		"navtitle": "Contractor Directory",
+		"tabtitle": "Contractor Directory",
+		"showLayerTitle": "0",
+		"primarytitle": "Georgia Defense Exchange",
+		"section": "Defense Exchange",
+		"sectionicon": "<i class='fa fa-fighter-jet'></i>",
+		"sectionhome": "defense-exchange",
+		"appStatusStyle": "appStatusBeta",
+		"provider": "Defense",
+		"image": "/defense/img/hero/moodys-1.jpg",
+		"addlisting": "http://data.georgia.org/directory/company/add",
+		"export": "off",
+		"feedaccess": "1",
+		"feedname": "Georgia DOD Contracts",
+		"feedX": "https://georgia-map.carto.com/api/v2/viz/c8411d64-711b-11e6-ac12-0e05a8b3e3d7/viz.json",
+		"feed": "https://georgia-map.carto.com/api/v2/viz/c8411d64-711b-11e6-ac12-0e05a8b3e3d7/viz.json",
+		"countyfieldX": "county",
+		"zipfield": "addresspostalcode",
+		"table": "dod",
+		"namefield": "companyname",
+		"username": "georgia-map",
+		"layerset": "georgia",
+		"orderby": "NULLIF(regexp_replace(dodcontractrevenue, '\\D', '', 'g'), '')::bigint DESC NULLS LAST",
+		"skips": "",
+		"imageOpacity": "0.98",
+		"headericoncolor": "#999",
+		"icon": "<i class='fa fa-recycle'></i>",
+		"source": "https://github.com/khai-e/gdx-v2",
+		"directorylinkaccess": "0",
+		"directoryframe": "/gdx-v2/guard_contractors.html",
+		"gologout": "/defense/",
+		"access": "1"
+	}
+  ]
+}
+);

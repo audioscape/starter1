@@ -1,0 +1,312 @@
+/* max-width: 800px */
+
+/* Also in Menu */
+.moduleJS .hideMobile {display:none;}
+.moduleJS .showMobile {display:block;}
+
+.moduleJS .settingsPanel {
+	width:100%;
+}
+.moduleJS .setDiv {
+	max-width:100%;
+}
+.moduleJS #detailsPanel {
+	width:100%;
+}
+.moduleJS .detailsScroll {
+	max-height: none;
+	overflow: auto;
+}
+.moduleJS #siteHeaderXXX {
+	position: fixed;
+	top:0; left:0; right:0;
+}
+.moduleJS .navTopHolder {
+	/* position: fixed; */
+	top: 75px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 9;
+	/* max-height: 48px; */
+	/* overflow: hidden; */
+}
+.moduleJS .navTop {
+    float:left;
+    width: auto;
+    min-height: auto;
+}
+.moduleJS .horizontalLogo {
+	margin: 0 auto;
+}
+.moduleJS .searchModuleIconHolder {
+	display: none;
+}
+.moduleJS .navTopAlignment {
+	text-align: left;
+	/* padding-left: 30px; */
+}
+.moduleJS .topButton i, .moduleJS .topButton div {
+	color: #fff;
+}
+
+.moduleJS .showCurrentSectionLg {
+	/* font-size: 38px; */
+	margin: 0px;
+	padding:0px !important;
+	/* padding-top: 18px !important; */
+	padding-left: 10px !important;
+	line-height: 46px;
+}
+@media (max-width: 500px) {
+	.moduleJS .showCurrentSectionLg {
+		font-size: 20px;
+	}
+}
+@media (max-width: 250px) {
+	.moduleJS .showCurrentSectionLg {
+		font-size: 24px;
+	}
+}
+.moduleJS #menuHolder {
+	width:100%;
+	/* margin-top: 75px; */
+}
+.moduleJS .smartSideMenuHolder {
+	width: auto;
+}
+.moduleJS #globalMenu {
+	pointer-events: auto;
+	left: 0px;
+	right: 0px;
+	/* z-index: 100; */
+}
+.moduleJS .listHeader {
+	display: none;
+}
+.moduleJS .refreshMap {
+	float:right;
+}
+.moduleJS .mapBarButtonsRight {
+	float: none;
+}
+.moduleJS .mapBarButtonsRight .showList {
+	/* need adjustment */
+	displayX: block;
+}
+.moduleJS .listPanel {
+	position: relative;
+	margin: 0px;
+	border-left: 0px;
+}
+.moduleJS .listPanelContent {
+	height: auto;
+	max-height: none;
+}
+.moduleJS .listPanel {
+	height: auto;
+	max-height: none;
+}
+.moduleJS .listPanelPercent {
+	width:100%;
+	max-width: none;
+	min-width: 200px;
+	float: none; /* Allows map to appear below list */
+}
+.moduleJS .listPanelPercentMax {
+	width:100%;
+	max-width:100%;
+}
+.moduleJS .rightPercent {
+	width:100%;
+	min-width: 200px;
+	float: left;
+}
+.moduleJS .rightPercentMax {
+	/* width:100%; */
+	/* max-width:100%; */
+}
+.moduleJS #mapTabsPanel {
+	/* position: relative; */
+	max-height: none;
+}
+.moduleJS .sideNavTop {
+	min-height: auto;
+}
+.moduleJS .besideLeft {
+	margin-left:0px;
+	border-left:none;
+}
+.moduleJS #defaultWidget {
+	display: none;
+}
+.moduleJS .contentarea {
+	float: left;
+}
+.moduleJS .headerLeftXXX {
+	padding-left: 20px;
+}
+.filterWrapper {
+	padding-left:20px;
+}
+.moduleJS .filterWrapper .sectionTitle {
+	/* display: none; */
+}
+.moduleJS .filterWrapperLeft {
+    padding-left: 28px;
+}
+.moduleJS #filterPanel {
+	float: left;
+}
+.moduleJS #filterPanelHolder {
+	padding-left: 30px;
+}
+.moduleJS #filterPanelHolderX {
+	width:100%;
+	margin-top: 300px; /* to prevent overlapping title */
+	top: 200px;
+	position:fixed;
+}
+.moduleJS .filterWrapperLeft {
+    padding-left: 10px;
+}
+.moduleJS .sectionTitle {
+	font-size:34pt;
+}
+.moduleJS #sectionCategoriesToggle {
+	margin-left: 0px;
+}
+.moduleJS .sectionTitle {
+	margin-bottom: 4px;
+}
+.moduleJS #sectionCategories .sectionCat label {
+	font-size: 22pt;
+	line-height: 28pt;
+}
+.moduleJS #sectionCategoriesToggle {
+	margin-left: 0px;
+}
+.moduleJS .mapBarRightX {
+	float: left;
+	clear: both;
+	position: relative;
+	width: 100% !important;
+	max-width: 100% !important;
+	min-width: none !important;
+	overflow: visible;
+}
+.moduleJS #mapBar > .leftPadding {
+	/* padding-left: 0px !important; */
+}
+.moduleJS .mapBarTop {
+	/* position: absolute; */
+	/* top:75px; */
+	/* left:0; */
+	/* right:0; */
+	/* z-index: 99; */ /* Resides behind mobile globalMenu */
+}
+.moduleJS #mapBarX {
+	background-color: rgba(250, 250, 250, 1);
+	/* border-bottom: 1px solid #cdc; */
+	/* position: fixed; */
+	z-index: 3;
+}
+.moduleJS .mapBarOffsetX {
+	height: 50px;
+}
+.moduleJS .listTable, .detailsTable {
+	max-height: none;
+}
+.moduleJS #sectionNavigation {
+	margin-top:44px;
+	margin-right:0px;
+}
+.moduleJS .filterClick {
+	display:block; /* Avoid width:100% since div has padding. */
+	/* margin-bottom: 10px; */
+}
+.moduleJS .mobileWide {
+	width: 100% !important;
+}
+.moduleJS #sectionNavigation {
+	/* margin-top: 100px; */
+}
+.moduleJS #filterPanelHolder {
+	z-index: 2;
+	position: relative;
+}
+.moduleJS .horizontalFilters {
+	/* padding: 8px 8px 0 8px; caused space */
+}
+.moduleJS #heroContent {
+	margin: 0px;
+	/* min-height: 120px; */
+	/* display:none !important; */
+}
+.moduleJS .contentPanel {
+	margin-left: 0px;
+}
+.moduleJS .showListAboveMap {
+	display:block;
+}
+.moduleJS .detailsPadding {
+	padding: 10px 0px 10px 0px;
+}
+.moduleJS #rowsTotal {
+	margin-bottom: 6px;
+	float:left;
+}
+.moduleJS .mapBarButtonsRight {
+	/* float:left; */
+}
+.moduleJS .layoutTabSm {
+	padding: 7px 6px 0px 6px;
+	margin-left: 4px;
+	margin-bottom: 4px;
+}
+.moduleJS .layoutTabIcon {
+	display: block !important;
+}
+.moduleJS .layoutTabText {
+	display: none;
+}
+.moduleJS .mapBarLeft {
+	/* width:100%; */
+}
+.moduleJS .mapBarButtons {
+	padding-left: 18px;
+}
+.moduleJS .layerTitleMapBar {
+	display: none;
+}
+.moduleJS .layerTitleAndArrow {
+	display: block;
+}
+.moduleJS .showMap {
+	display: block;
+}
+.moduleJS .searchTextHolder {
+	padding-left: 0px;
+	float: left;
+}
+#headerMainNav .showFilters, #headerMainNav .hideFilters {
+	top: -10px !important;
+}
+#headerMainNav .hideFilters {
+	color: #444;
+}
+.c-action { /* CognitoForms */
+	position: fixed;
+	bottom: 0; left: 0; right: 0;
+	z-index: 99999;
+	background: #ccc;
+	border-topX: 1px solid #ccc;
+	padding: 10px; padding-top: 6px;
+	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px 2px;
+}
+.cognito .c-forms-form .c-forms-form-title h2 {
+    color: #000000;
+    line-height: 1.15em;
+    font: normal 24px/30px 'Open Sans Condensed',Helvetica,sans-serif;
+}

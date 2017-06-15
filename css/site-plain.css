@@ -1,0 +1,360 @@
+.moduleJS .moduleBackground {
+	/* display: none; */
+}
+.moduleJS .sectionBack {
+	display:none; /* Omit from COI Site */
+}
+.moduleJS .enableGridXXXX {
+	display:none; /* Omit from COI Site */
+}
+.moduleJS .showFiltersHolder {
+	displayX:none; /* Omit from COI Site */
+}
+.moduleJS #sectionNavigation {
+	margin-left: 30px; /* Adjust for omitted back arrow */
+}
+.moduleJS .leftPadding {
+    /* padding-left: 20px !important; */
+}
+.moduleJS .sectionBackLink {
+	background-color: #fff;
+	border:1px solid #333;
+}
+.moduleJS .sectionBackLink:hover {
+	background-color: #fff;
+	border:1px solid #000;
+}
+.moduleJS .sectionBackLink a {
+	color:#999;
+}
+.moduleJS .sectionBackLink a:hover {
+	color:#444;
+}
+.moduleJS #sectionCategories {
+	/* margin-left:22px; */
+}
+.moduleJS .settingsPanel {
+	color: #333;
+	background-color: #fff;
+	border:1px solid #bbb;
+}
+.moduleJS .appMenuInner {
+    /* background-color: transparent; */
+    background-color: #fff;
+}
+.moduleJS .topMenu.active {
+	background-color: #222;
+}
+.moduleJS .actionMenu {
+    /* background-color: #fff; */
+}
+.actionMenu a {
+	color: #333;
+	text-decoration: none;
+}
+.moduleJS .actionMenu a:hover {
+	color: blue;
+}
+.moduleJS .layerSectionTitleFormat {
+	color: #333;
+}
+.moduleJS .showAllLayers {
+	background-color: #fff !important;
+	border-bottom: 1px solid #eee;
+}
+.moduleJS .leftArrow {
+    border-color: transparent transparent transparent #999;
+}
+.moduleJS .downArrow {
+    border-color: #999 transparent transparent transparent;
+}
+.moduleJS .showAllLayers:hover {
+	background-color: #fafafa !important;
+}
+.moduleJS #hideSectionCategories {
+	color:#fff;
+}
+.moduleJS .hideSearchHolder {
+	display: none;
+}
+.moduleJS .rightPercentX {
+	float: left;
+	width: auto;
+}
+.moduleJS #panelDividerLine {
+	display:block;
+}
+.moduleJS #filterPanel {
+	padding-left:0px;
+	padding-bottom:0px;
+	background-color: transparent;
+}
+.moduleJS .filterLabel, .moduleJS .sectionProviderTitle {
+	color: #333 !important;
+}
+.moduleJS .filterFieldText {
+	color: #333;
+}
+.moduleJS .filterHot {
+	/* background-color: #eee; */
+	/* background-color: rgba(250, 250, 250, 0.85); */
+	/* background-color: #999; */
+	/* color: #fff; */
+	/* border-color: #aaa; */
+	border: 0px;
+}
+.moduleJS .searchTextMove {
+	line-height: 16px;
+	/* margin-bottom: 16px; */
+	padding-left: 10px;
+}
+.moduleJS #searchText {
+	color: #333;
+}
+
+/*
+Not used now that surrounding background is always dark.
+.moduleJS .layoutTab {
+	background-color: #fff;
+}
+.moduleJS .layoutTab i, .moduleJS .layoutTab div {
+	color: #999;
+}
+.moduleJS .layoutTab:hover {
+	color: #fff;
+	background-color: #bbb;
+}
+.moduleJS .layoutTab:hover i {
+	color: #fff;
+}
+.moduleJS .layoutTab:hover div {
+	color: #fff;
+}
+.moduleJS .layoutTab {
+	color: #333;
+	text-shadow: none;
+	background-color: #eee;
+	margin-bottom: 4px;
+}
+.moduleJS .layoutTab .active {
+	background: #fff;
+}
+.moduleJS .layoutTabText {
+	color: #777;
+}
+*/
+
+.moduleJS .sideTip {
+	background-color: rgba(240, 240, 250, 0.8);
+	background-color: #fff;
+}
+.moduleJS .sideTip:after {
+	border-bottom-color: rgba(240, 240, 250, 0.8);
+	border-bottom-color: #fff;
+}
+.moduleJS .layerSideNavTip {
+    color: #333;
+    text-shadow: none;
+    /* margin-bottom: 10px; */
+}
+.moduleJS .toggleListFormatsX {
+	padding-top: 5px;
+}
+.moduleJS #layerBox {
+	background-color: transparent;
+}
+.moduleJS .tabSections {
+	border-right: 1px solid #eee;
+}
+.moduleJS .layerMain {
+	float: left;
+	width: 100%;
+}
+.moduleJS .layerActionIcon {
+	background-color: #fff;
+}
+.moduleJS .layerActionActive {
+    background-color: #3B99FC;
+}
+.moduleJS .layerActionIcon:before {
+	color: #aaa;
+}
+.moduleJS .layerActionActive:before {
+	color:#fff;
+}
+
+.moduleJS .navTop .showCurrentSection {
+	color: #fff;
+}
+.moduleJS .navTop .showCurrentSection:hover {
+	color: #fff;
+}
+
+.moduleJS .navTop .forwardArrow {
+	border-color: transparent transparent transparent #fff;
+}
+.moduleJS .navTopFont {
+	color:#333;
+    text-shadow: none;
+}
+
+.moduleJS .textDropShadow {
+	color: #555;
+    text-shadow: none;
+}
+.moduleJS .sectionTitle {
+	color: #555;
+	text-shadow: none;
+}
+.moduleJS .contentPanel {
+	margin-left: 0px;
+}
+/* maybe change */
+.moduleJS .navTopTitleText:hover {
+	color:#000 !important;
+}
+.moduleJS .showCurrentSection {
+	color:#555;
+}
+.moduleJS .showCurrentSection:hover {
+	color:#ccc;
+}
+.moduleJS .showCurrentSection:hover .forwardArrowInBar {
+	border-color: transparent transparent transparent orange;
+}
+.moduleJS #mapBar, .moduleJS .filterWrapper {
+	background-color: rgba(250, 250, 250, 1) !important;
+}
+.moduleJS #mapBar .mapBarRight .hideMap {
+	display: none;
+}
+.moduleJS .showLayersMapBar, .moduleJS .hideLayersMapBar {
+	float: left;
+	padding: 16px 10px 0 20px;
+}
+
+.moduleJS .hideLayersClick i {
+	text-shadow: none;
+}
+.moduleJS .filterLabel {
+	text-shadow: none;
+}
+
+.moduleJS .primaryHeader .filterLabel {
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+	color:#fff !important;
+}
+
+.moduleJS .filterWrapper .hideFilters {
+    background-color: rgba(220, 220, 220, 0.8);
+    background-color: transparent;
+    color: #eee;
+    font-size: 28px;
+}
+.moduleJS .navTopRight .menuTopIcon:hover {
+	text-shadow: none !important;
+	color:#fff;
+}
+.moduleJS .navTopLeftWidthWide {
+	background-color: #fcfcfc;
+}
+.moduleJS .littleTab i {
+    /* color: #ddd; */
+    /* text-shadow: rgba(33, 33, 33, 0.498039) 1px 1px 2px; */
+}
+.moduleJS #mapBar .menuTopIcon {
+	color: #999;
+}
+.moduleJS #mapBar .menuTopIcon:hover {
+	text-shadow: 1px 1px 2px rgba(33, 33, 33, .5);
+}
+.moduleJS .navClone {
+    margin: 0px;
+    background-color: #fff;
+}
+
+/* Light left side */
+.moduleJS .layerCheckboxes {
+	/* border-top: 1px solid #ccc; */
+	/* border-bottom: 10px solid #ccc; */
+}
+.moduleJS .layerCheckboxes .dontsplit {
+    margin-bottom: 0px;
+}
+.moduleJS .layerSectionTitle {
+	background-color: #eee;
+	color: #333;
+	/* border-top: 0px solid #fff; */
+	border-bottom: 1px solid #fff;
+	padding: 8px 4px 3px 13px;
+}
+.moduleJS .layerSectionTitle:hover {
+	background-color: #ddd;
+}
+.moduleJS .layerCbRow {
+	padding-left:8px;
+	background-color: #fff;
+	color: #333;
+	border-top: 1px solid #eee;
+}
+.moduleJS .layerCbRow:hover {
+	background-color: #fafafa;
+}
+.moduleJS .dontsplit {
+	/* border-bottom: 1px solid #bbb; */
+}
+.moduleJS .sectionArrowHolder {
+	padding-top: 3px;
+}
+.moduleJS .layerSection {
+    border-bottom: 1px solid #eee;
+}
+.moduleJS .navTopLeftWidthWide {
+    border-right: 1px solid #eee;
+}
+
+.moduleJS .menuRectBkgdXXX:hover {
+	border: 3px solid darkblue;
+}
+.moduleJS .menuUL li.active {
+	background-color: transparent;
+}
+.moduleJS #smartSideMenu {
+	/* border-right: 1px solid #eee; */
+	/* margin-right: 6px; */
+}
+.moduleJS .showSettingsInNavTop .topButton {
+	background-color: transparent;
+}
+.moduleJS .showSettingsInNavTop .topButton i {
+	padding-top:9px;
+	padding-left:4px;
+	color: #fff;
+	font-size: 32px;
+}
+/* menu.css overrides */
+.moduleJS #smartOuter {
+	background-color: #fff;
+}
+.moduleJS .mainMenuSubtitle {
+	color: #333;
+}
+.moduleJS .menuRectIcon i {
+	color: #999;
+}
+.moduleJS .mainMenuTitle {
+	color: #777;
+}
+.moduleJS .menuRectTitle {
+	color: #999;
+}
+.menuRectBkgd:hover i {
+	color: #fff;
+}
+.menuRectBkgd:hover div {
+	color: #fff;
+}
+.menuTopIconClose {
+	font-size: 18px;
+	color: #555;
+}

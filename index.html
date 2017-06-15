@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<title>Datavue Starter</title>
+
+<!-- Includes JQuery -->
+<script src="js/cartodb.js"></script>
+<script src="js/one.js"></script>
+<script type="text/javascript">
+
+function embedLoaded() {
+    var moduleSettings = {
+	  go: "main",
+	  layerjson: "json/menu.json",
+	  root: "/starter1/"
+	};
+    moduleEmbed.init(moduleSettings);
+    moduleEmbed.helloWorld();
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body>
+
+<style>
+	.regularLogo {
+		display: none;
+	}
+</style>
+<div class="widgetHolder">
+	<div id="map" style="width:100%;height:653px;"></div>
+	<div id="indexHolder"></div>
+	<div id="searchHolder"></div>
+</div>
+
+<link href="css/site.css" type="text/css" rel="stylesheet" />
+
+<!-- showButtons=0&showFilters=1&showAddListing=1 -->
+
+<link id="//fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300" media="all">
+
+<link rel='stylesheet' id='googlefont-css'  href='//fonts.googleapis.com/css?family=Rokkitt%3A400%2C700%7CRoboto+Condensed%3A400italic%2C700italic%2C400%2C700&#038;ver=4.7.5' type='text/css' media='all' />
+
+
+</body>
+</html>

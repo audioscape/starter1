@@ -1,0 +1,63 @@
+body {
+    background: #1a1a1a; */ /* Need to double check with GeorgiaPower iFrame: Avoid placing background color here, effects content of iFrame with properties list. */
+
+}
+.moduleJS .moduleBackground, .moduleJS .moduleBackgroundImage {
+	display: none; /* To do: disable setting background image for this sitelook. Div name could be toggled so div is not found. */
+}
+.moduleJS #heroContent {
+	background-color: #80c67f;
+	border-top: 8px solid #4EAA4C;
+	min-height: 200px;
+	/* overflow: visible; */
+	float: left;
+	width: 100%;
+}
+.moduleJS .sectionBack {
+	display: none;
+}
+.moduleJS #sectionCategories {
+	margin-left: 18px;
+	background-color: #4EAA4C;
+}
+.moduleJS #sectionNavigation {
+	min-width: 300px;
+	margin-right: 20px;
+	margin-left: 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.moduleJS .sectionTitle {
+	color: #fff;
+}
+.moduleJS #hideSectionCategories {
+	display: none;
+}
+.moduleJS #sectionCategories {
+	/* background-color: transparent; */
+}
+.moduleJS .topMenu.active {
+	background-color: #4EAA4C;
+}
+.moduleJS #navTopBar {
+	
+}
+.moduleJS .textDropShadow {
+	color: #fff;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 1);
+}
+.moduleJS .rightPercentX {
+	float: left;
+	width: auto;
+}
+.moduleJS #filterPanel {
+	margin-top: 20px;
+	background-color:transparent;
+}
+.moduleJS .mainMenuTitle {
+    color: #ddd;
+}
+.moduleJS .nav>li>a {
+	color:#fff;
+}
